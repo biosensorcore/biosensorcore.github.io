@@ -1,0 +1,29 @@
+{
+    "pages": [{
+            "title": "About",
+            "url": "about",
+            "subpages": []
+        }, {
+            "title": "People",
+            "url": "people",
+            "subpages": []
+        }, {
+            "title": "Rates & Services",
+            "url": "rates",
+            "subpages": []
+        }, {
+            "title": "Biosensor Collection",
+            "url": "collections",
+            "subpages": []
+        }, {
+            "title": "Resources",
+            "url": "resources",
+            "subpages": []
+        },
+        {
+            "title": "Contact Us",
+            "url": "contact",
+            "subpages": []
+        }
+    ]
+}

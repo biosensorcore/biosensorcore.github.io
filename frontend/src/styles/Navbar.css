@@ -1,0 +1,55 @@
+@import './Colors.css';
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.navbar_logo_image {
+    width: 100%;
+}
+
+.navbar-brand {
+    width: 20%;
+}
+
+.navbar {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%)
+}
+
+.nav-link {
+    color: var(--light-blue);
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.dropdown-menu {
+    background-color: var(--navy-blue);
+    border: none;
+    border-radius: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown-menu[data-bs-popper] {
+    margin-top: 0px;
+}
+
+.dropdown-item:hover {
+    background-color: white;
+    color: var(--navy-blue);
+}
+
+.navbar-toggler {
+    color: var(--light-blue);
+    align-self: center;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar>.container {
+    justify-content: center;
+}

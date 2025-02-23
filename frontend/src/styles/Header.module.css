@@ -1,0 +1,23 @@
+.header_container {
+    width: 100%;
+    color: navy;
+    background-color: white;
+    min-height: 20vh;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header_text {
+    width: 50%;
+}
+
+.logo_container {
+    width: 50%;
+    height: 50%;
+}
+
+.header_logo_image {
+    width: 40%;
+}

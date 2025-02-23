@@ -1,0 +1,68 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+section {
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    font-family: "Roboto", serif;
+    min-height: 100vh;
+}
+
+h1,
+p,
+input,
+button,
+label,
+a,
+div,
+textarea {
+    color: var(--default-text-color);
+}
+
+p {
+    margin: 0% 0%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+a:hover {
+    color: var(--secondary-darker);
+}
+
+button {
+    background-color: var(--light-blue);
+    padding: 1% 5%;
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0;
+    color: white;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--navy-blue);
+    color: var(--light-blue);
+}

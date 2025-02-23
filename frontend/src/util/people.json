@@ -1,0 +1,12 @@
+{
+    "people": [{
+        "name": "Alexandra Newton",
+        "bio": "Ph.D., Core Director"
+    }, {
+        "name": "Nathan Shaner",
+        "bio": "Ph.D., Core Manager"
+    }, {
+        "name": "Gerard Lambert",
+        "bio": "Biosensor Specialist"
+    }]
+}

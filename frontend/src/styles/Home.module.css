@@ -1,0 +1,90 @@
+/* .banner_image {
+    min-height: 500px;
+    width: 100%;
+    background: url("../../public/images/banner.png") 
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+.banner_image.fade_in {
+    opacity: 1;
+} */
+
+.banner_image {
+    width: 100%;
+    min-height: 70vh;
+    background-image: url("../../public/images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner_text {
+    position: absolute;
+    top: 50%;
+    transform: scale(0.9);
+    color: var(--navy-blue);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    opacity: 0;
+    width: 100%;
+    transition: opacity 4s ease, transform 4s ease;
+}
+
+.banner_text.fade_in {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 4s ease, transform 4s ease;
+}
+
+.banner_overlay.fade_in {
+    padding-left: 0%;
+    transition: padding 1s cubic-bezier(0.65, 0.05, 0.36, 1)
+    /* padding: 0px; */
+}
+
+.banner_text h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.about_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5%;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.mission_section {
+    background-color: var(--navy-blue);
+    color: white;
+    padding: 5% 5%;
+}
+
+.mission_section h2 {
+    color: var(--light-blue);
+    margin-bottom: 2%;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: var(--light-blue);
+}
+
+.table thead {
+    background-color: var(--navy-blue);
+    color: white;
+}
+
+.table tbody {
+    border: var(--light-blue) solid 2px;
+    border-radius: 5px;
+}
+
+.table thead {
+    border: var(--navy-blue) solid 2px;
+    border-radius: 5px;
+}

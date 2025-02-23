@@ -1,0 +1,60 @@
+.footer_infobar {
+    background-color: var(--light-blue);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+}
+
+.infobar_logo_container {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.infobar_logo {
+    width: 100%;
+}
+
+.infobar_text {
+    align-items: center;
+}
+
+.footer_main_container {
+    background-color: var(--navy-blue);
+    padding: 2em 3em 5em 3em;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_table_container {
+    flex-basis: 80%;
+}
+
+.footer_link {
+    color: white;
+}
+
+.footer_link:hover {
+    color: var(--light-blue);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid var(--dark-lighter);
+}
+
+thead {
+    font-weight: 600;
+    color: var(--light-blue);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}

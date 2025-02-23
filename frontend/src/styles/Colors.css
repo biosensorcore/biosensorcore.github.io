@@ -1,0 +1,10 @@
+:root {
+    --bs-primary-rgb: 24, 43, 79;
+    --bs-secondary-rgb: #2ecc71;
+    --bs-danger-rgb: #e74c3c;
+    --bs-warning-rgb: #f1c40f;
+    --bs-info-rgb: #8e44ad;
+    --bs-navbar-color: #000000;
+    --light-blue: #00C6D7;
+    --navy-blue: rgb(24, 43, 79);
+}

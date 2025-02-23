@@ -1,0 +1,27 @@
+.content_header {
+    font-size: 35px;
+    font-weight: 700;
+    background-color: var(--light-blue);
+    color: white;
+    padding: 1em 3em;
+}
+
+.content_main {
+    min-height: 80vh;
+    padding: 5% 0%;
+}
+
+.content_section {
+    padding: 0% 10%;
+    display: flex;
+    width: 100%;
+}
+
+.content_default {
+    padding: 5%;
+}
+
+.content_link {
+    color: --navy-blue;
+    text-decoration: underline;
+}
