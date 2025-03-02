@@ -1,4 +1,5 @@
 import styles from '../styles/ContentBox.module.css';
+import { Link } from 'react-router-dom';
 
 function ContentBox({content}) {
     const {text, header, img, url, short} = content;
@@ -22,9 +23,9 @@ function ContentBox({content}) {
 
     return <div className={`${styles.content_box_wrapper} ${short ? styles.content_box_short : ""}`}>
         {url ? 
-        <a href={url} target={`${url.includes("http") ? "_blank" : "" }`}>
+        <Link to={url} target={`${url.includes("http") ? "_blank" : "" }`}>
             <Box/>
-        </a> : <Box/>}
+        </Link> : <Box/>}
     </div>
     
 }
