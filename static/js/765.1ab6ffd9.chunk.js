@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[765],{765:(n,e,t)=>{t.r(e),t.d(e,{default:()=>c});var r=t(558),s=t(579);const c=function(){return(0,s.jsx)(s.Fragment,{children:(0,s.jsx)("div",{className:r.A.content_default,children:(0,s.jsx)("h3",{children:"Coming Soon..."})})})}}}]);
+//# sourceMappingURL=765.1ab6ffd9.chunk.js.map
