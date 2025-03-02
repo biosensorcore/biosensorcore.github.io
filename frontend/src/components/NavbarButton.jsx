@@ -30,7 +30,7 @@ function NavbarButton({page}) {
             </NavDropdown>
         )
     } else {
-        return (<Nav.Link href={url}>{title.toUpperCase()}</Nav.Link>);
+        return (<Nav.Link as={Link} to={url}>{title.toUpperCase()}</Nav.Link>);
     }
 }
 
