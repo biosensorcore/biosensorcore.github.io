@@ -34,7 +34,7 @@ function Footer() {
                                 </td>
                                 <td>
                                     <Link className={styles.footer_link} to="https://x.com" target="_blank" aria-label="Twitter">
-                                        <i class="fab fa-twitter"></i>
+                                        <i className="fab fa-twitter"></i>
                                     </Link>
                                 </td>
                                 
