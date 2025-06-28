@@ -2,7 +2,6 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState } from 'react';
 import '../styles/Navbar.css';
-import { Link } from 'react-router-dom';
 
 function NavbarButton({page}) {
     const { title, url, subpages } = page;
@@ -25,12 +24,12 @@ function NavbarButton({page}) {
                 onMouseLeave={handleMouseLeave}
             >
                 {subpages.map((item) => (
-                    <NavDropdown.Item as={Link} to={item.url}>{item.title.toUpperCase()}</NavDropdown.Item>
+                    <NavDropdown.Item href={item.url}>{item.title.toUpperCase()}</NavDropdown.Item>
                 ))}
             </NavDropdown>
         )
     } else {
-        return (<Nav.Link as={Link} to={url}>{title.toUpperCase()}</Nav.Link>);
+        return (<Nav.Link href={url}>{title.toUpperCase()}</Nav.Link>);
     }
 }
 

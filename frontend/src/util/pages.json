@@ -19,6 +19,10 @@
             "title": "Resources",
             "url": "resources",
             "subpages": []
+        }, {
+            "title": "Gallery",
+            "url": "gallery",
+            "subpages": []
         },
         {
             "title": "Contact Us",

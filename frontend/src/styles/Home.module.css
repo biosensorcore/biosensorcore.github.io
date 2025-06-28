@@ -57,6 +57,7 @@
     gap: 5%;
     width: 100%;
     padding-bottom: 5%;
+    align-items: center;
 }
 
 .mission_section {
@@ -68,6 +69,14 @@
 .mission_section h2 {
     color: var(--light-blue);
     margin-bottom: 2%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid var(--dark-lighter);
+    font-size: 1.7vmax;
 }
 
 .table tbody tr:nth-child(odd) {
@@ -87,4 +96,10 @@
 .table thead {
     border: var(--navy-blue) solid 2px;
     border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .banner_text h2 {
+        font-size: 3rem;
+    }
 }

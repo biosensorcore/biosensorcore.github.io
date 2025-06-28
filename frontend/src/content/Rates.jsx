@@ -14,53 +14,56 @@ function Rates() {
     }});
 
     return <>
-        <div className={content.content_default}>
-            <h3>Service Categories</h3>
-        </div>
-        <ContentBoxGroup contentBoxes={categories}/>
-        <div className={content.content_default}>
-            <table className={styles.table}>
-                <thead>
-                    <tr>
-                        <th>
-                            Project Type
-                        </th>
-                        <th>
-                            Personnel - Consultation (hrs)
-                        </th>
-                        <th>
-                            Personnel - Design & Analysis (hrs)
-                        </th>
-                        <th>
-                            Wet Lab (hrs)
-                        </th>
-                        <th>
-                            Imaging (hrs)
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {RateJSON.rates.map(rate => (
-                        <tr id={rate.id}>
-                            <td>
-                                {rate.type}
-                            </td>
-                            <td>
-                                {rate.personnel_consultation}
-                            </td>
-                            <td>
-                                {rate.personnel_design}
-                            </td>
-                            <td>
-                                {rate.wet_lab}
-                            </td>
-                            <td>
-                                {rate.imaging}
-                            </td>
+        <div className={content.content_header}>Rates & Services</div>
+        <div className={content.content_main}>
+            <div className={content.content_default}>
+                <h3>Service Categories</h3>
+            </div>
+            <ContentBoxGroup contentBoxes={categories}/>
+            <div className={content.content_default}>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th>
+                                Project Type
+                            </th>
+                            <th>
+                                Personnel - Consultation (hrs)
+                            </th>
+                            <th>
+                                Personnel - Design & Analysis (hrs)
+                            </th>
+                            <th>
+                                Wet Lab (hrs)
+                            </th>
+                            <th>
+                                Imaging (hrs)
+                            </th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {RateJSON.rates.map(rate => (
+                            <tr id={rate.id}>
+                                <td>
+                                    {rate.type}
+                                </td>
+                                <td>
+                                    {rate.personnel_consultation}
+                                </td>
+                                <td>
+                                    {rate.personnel_design}
+                                </td>
+                                <td>
+                                    {rate.wet_lab}
+                                </td>
+                                <td>
+                                    {rate.imaging}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </>;
 }

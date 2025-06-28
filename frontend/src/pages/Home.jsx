@@ -33,8 +33,7 @@ function Home() {
 
 
     return (<>
-        <Header/>
-        <HeaderNavbar/>
+        
         <div>
             <div className={styles.banner_image}>
             {/* <div className={styles.banner_image + (isLoaded ? styles.fade_in : "")}> */}
@@ -57,8 +56,7 @@ function Home() {
                 </p>
             </div>
         </div>
-        <ContentBoxGroup contentBoxes={contentBoxes} />
-        <Footer/>
+        
     </>);
 }
 

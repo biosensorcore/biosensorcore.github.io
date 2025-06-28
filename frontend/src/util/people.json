@@ -8,5 +8,58 @@
     }, {
         "name": "Gerard Lambert",
         "bio": "Biosensor Specialist"
-    }]
+    }],
+    "advisory_board": [{
+            "name": "Alexandra C. Newton, Ph.D.",
+            "bio": "Distinguished Professor of Pharmacology; Director, Cell Signaling San Diego, University of California, San Diego. Dr. Newton investigates the molecular mechanisms of signal transduction, focusing on protein kinases and phosphatases, particularly protein kinase C (PKC), to understand their roles in cell signaling and disease."
+        },
+        {
+            "name": "Jin Zhang, Ph.D.",
+            "bio": "Professor of Pharmacology, Bioengineering, and Chemistry & Biochemistry, University of California, San Diego. Dr. Zhang's research focuses on the spatiotemporal regulation of cell signaling pathways, including GPCR, cAMP/PKA, Ca²⁺/calcineurin, PI3K/Akt/mTOR, Ras/ERK, and AMPK, utilizing genetically encoded fluorescent biosensors and advanced imaging techniques."
+        },
+        {
+            "name": "Alan R. Saltiel, Ph.D.",
+            "bio": "Distinguished Professor of Medicine and Pharmacology; Director, Institute for Diabetes and Metabolic Health, University of California, San Diego. Dr. Saltiel's research centers on the hormone insulin and its role in regulating cellular sugar levels, with implications for understanding obesity, diabetes, and other metabolic disorders."
+        },
+        {
+            "name": "Peter Yingxiao Wang, Ph.D.",
+            "bio": "Dwight C. and Hildagarde E. Baum Chair and Professor, Department of Biomedical Engineering; Professor, Department of Molecular Microbiology and Immunology, University of Southern California. Dr. Wang's research includes the development of genetically encoded molecular biosensors based on fluorescence resonance energy transfer (FRET) for visualizing and quantifying molecular signals in live cells under various physical and mechanical environments."
+        },
+        {
+            "name": "Hui-wang Ai, Ph.D.",
+            "bio": "Professor of Molecular Physiology and Biological Physics; Resident Faculty Member, Center for Membrane and Cell Physiology; Affiliate Faculty, Departments of Chemistry and Biomedical Engineering, University of Virginia. Dr. Ai develops novel molecular probes, including bioluminescent sensors, to investigate cellular communications, focusing on signaling pathways involving redox-active molecules, neurotransmitters, and protein post-translational modifications."
+        },
+        {
+            "name": "Jennifer A. Prescher, Ph.D.",
+            "bio": "Professor of Chemistry, Molecular and Cell Biology & Biochemistry, and Pharmaceutical Sciences, University of California, Irvine. Dr. Prescher designs and deploys custom tools to visualize cellular networks in real time with molecular precision, aiming to decode cellular communications relevant to infectious diseases, cancer metastases, and immune function."
+        },
+        {
+            "name": "Eric D. Petersen, Ph.D.",
+            "bio": "Assistant Professor, Central Michigan University College of Medicine. Dr. Petersen's research focuses on the development of genetically encoded tools using rational protein design and protein evolution to report or control cell signaling and neuronal activity."
+        },
+        {
+            "name": "Robert E. Campbell, Ph.D.",
+            "bio": "Professor, Department of Chemistry, The University of Tokyo. Dr. Campbell focuses on the engineering of fluorescent proteins and the development of genetically encoded biosensors to study neuronal activity and biochemistry."
+        },
+        {
+            "name": "Ben Campbell, Ph.D.",
+            "bio": "Postdoctoral Fellow, Department of Neurosciences, University of California, San Diego. Dr. Campbell's work involves the development of biosensors for real-time, multicolor, and multi-organelle redox imaging in human cells and other organisms."
+        },
+        {
+            "name": "Loren L. Looger, Ph.D.",
+            "bio": "Professor of Neurosciences, University of California, San Diego; Investigator, Howard Hughes Medical Institute. Dr. Looger specializes in protein engineering to develop intensity-based fluorescent biosensors from GFP and periplasmic binding proteins, facilitating the study of small molecule interactions in neurobiology."
+        },
+        {
+            "name": "Oliver Griesbeck, Ph.D.",
+            "bio": "Research Group Leader, Max Planck Institute for Biological Intelligence. Dr. Griesbeck's research is dedicated to the development of protein biosensors to study neuronal activity and biochemistry, integrating biophysical and structural studies with molecular biology techniques."
+        },
+        {
+            "name": "Eric R. Schreiter, Ph.D.",
+            "bio": "Group Leader, Janelia Research Campus, Howard Hughes Medical Institute. Dr. Schreiter creates molecular tools to visualize and dissect neuronal circuits, focusing on developing protein-based tools for neurobiology."
+        },
+        {
+            "name": "Ryohei Yasuda, Ph.D.",
+            "bio": "Scientific Director and Research Group Leader, Max Planck Florida Institute for Neuroscience. Dr. Yasuda studies the mechanisms of synaptic signaling and plasticity, employing advanced imaging techniques to understand the operation principles of signaling networks underlying learning and memory."
+        }
+    ]
 }

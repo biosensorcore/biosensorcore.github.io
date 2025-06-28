@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styles from '../styles/Footer.module.css'
 
 function Footer() {
@@ -16,36 +15,30 @@ function Footer() {
 
             <div className={styles.footer_main_container}>
                 <div className={styles.footer_table_container}>
-                    <table>
+                    <table className={styles.footer_table}>
                         <thead>
                             <tr>
                                 <th>MENU</th>
                                 <th>QUICK LINKS</th>
-                                <th>SOCIAL MEDIA</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <Link className={styles.footer_link} to="/about">About</Link>
+                                    <a className={styles.footer_link} href="/about">About</a>
                                 </td>
                                 <td>
-                                    <Link className={styles.footer_link} to="/contact">Contact</Link>
-                                </td>
-                                <td>
-                                    <Link className={styles.footer_link} to="https://x.com" target="_blank" aria-label="Twitter">
-                                        <i className="fab fa-twitter"></i>
-                                    </Link>
+                                    <a className={styles.footer_link} href="/contact">Contact</a>
                                 </td>
                                 
                                 
                             </tr>
                             <tr>
                                 <td>
-                                    <Link className={styles.footer_link} to="/collections">Biosensors</Link>
+                                    <a className={styles.footer_link} href="/collections">Biosensors</a>
                                 </td>
                                 <td>
-                                    <Link className={styles.footer_link} to="/rates">Rates & Services</Link>
+                                    <a className={styles.footer_link} href="/rates">Rates & Services</a>
                                 </td>
 
                             </tr>

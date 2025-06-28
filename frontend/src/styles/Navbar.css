@@ -52,4 +52,5 @@
 
 .navbar>.container {
     justify-content: center;
+    z-index: 100;
 }

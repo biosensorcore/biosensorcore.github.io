@@ -24,6 +24,10 @@
     height: 65vh;
 }
 
+.content_box_wrapper.content_box_collapsed {
+    height: 15vh;
+}
+
 .content_box_wrapper:hover {
     /* padding: 1%; */
     transform: scale(1.05);
@@ -79,4 +83,11 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media (max-width: 800px) {
+    .content_box_wrapper {
+        width: 100%;
+        flex-basis: 100%;
+    }
 }

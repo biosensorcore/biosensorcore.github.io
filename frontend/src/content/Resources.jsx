@@ -1,4 +1,5 @@
 import ContentBoxGroup from "../components/ContentBoxGroup";
+import styles from "../styles/Content.module.css";
 
 function Resources() {
 
@@ -35,7 +36,12 @@ function Resources() {
         }
     ];
 
-    return <ContentBoxGroup contentBoxes={content}/>
+    return  <>
+        <div className={styles.content_header}>Resources</div>
+        <div className={styles.content_main}>
+            <ContentBoxGroup contentBoxes={content}/>
+        </div>
+    </>
 }
 
 export default Resources;
