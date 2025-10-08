@@ -6,7 +6,7 @@ function Footer() {
             <div className={styles.footer_infobar}>
                 <div className={styles.infobar_logo_container}>
                 <a href="https://ucsd.edu">
-                    <img className={styles.infobar_logo} src="images/ucsd-logo-white.png"/>
+                    <img className={styles.infobar_logo} src="images/ucsd-logo-white.png" alt="UCSD Logo"/>
                 </a>
                 </div>
                 <div className={styles.infobar_text}>9515 Gilman Drive, La Jolla, CA 92093</div>

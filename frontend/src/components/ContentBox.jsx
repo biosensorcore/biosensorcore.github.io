@@ -7,7 +7,7 @@ function ContentBox({content}) {
         return (
             <div className={styles.content_box_container}>
                 {img ? <div className={`${styles.content_box_image_container} ${short ? styles.content_box_short : ""}`}>
-                    <img src={`images/${img}`}/>
+                    <img src={`images/${img}`} alt={header || "Content image"}/>
                 </div> : null}
                 <div className={styles.content_box_header}>
                     <h5>{header}</h5>

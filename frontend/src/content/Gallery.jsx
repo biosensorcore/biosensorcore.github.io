@@ -16,12 +16,10 @@ try {
 
 function Gallery() {
     const [videos, setVideos] = useState([]);
-    const [lastUpdated, setLastUpdated] = useState(0);
 
     const loadVideos = async () => {
         const resp = await axios.get(`${APP_URL}/latest_videos`);
         setVideos(resp.data.videos);
-        setLastUpdated(resp.data.time);
     }
 
     useEffect(() => {
