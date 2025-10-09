@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     flex-direction: row;
-    padding: 0% 8% 5% 8%;
+    padding: 0% 4% 5% 4%;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
@@ -16,7 +16,8 @@
     width: 25%;
     flex-shrink: 0;
     min-height: 300px;
-    padding: 1.5%;
+    padding: 1%;
+    box-sizing: border-box;
     transition: transform 0.2s ease;
 }
 
