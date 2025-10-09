@@ -28,66 +28,58 @@ function Rates() {
                     <tbody>
                         <tr>
                             <td>Personnel - Consultation</td>
-                            <td>$150/hr</td>
+                            <td>$100/hr</td>
                         </tr>
                         <tr>
                             <td>Personnel - Design & Analysis</td>
-                            <td>$200/hr</td>
+                            <td>$100/hr</td>
                         </tr>
                         <tr>
                             <td>Wet Lab</td>
                             <td>$100/hr</td>
                         </tr>
                         <tr>
-                            <td>Imaging</td>
-                            <td>$75/hr</td>
+                            <td>Imaging (assisted/full-service)</td>
+                            <td>$150/hr</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             
             <div className={content.content_default}>
-                <h3>Project Time Estimates</h3>
+                <h3>Project Cost Estimates</h3>
                 <table className={styles.table}>
                     <thead>
                         <tr>
-                            <th>
-                                Project Type
-                            </th>
-                            <th>
-                                Personnel - Consultation (hrs)
-                            </th>
-                            <th>
-                                Personnel - Design & Analysis (hrs)
-                            </th>
-                            <th>
-                                Wet Lab (hrs)
-                            </th>
-                            <th>
-                                Imaging (hrs)
-                            </th>
+                            <th>Project Type</th>
+                            <th>Total Cost Range</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {RateJSON.rates.map(rate => (
-                            <tr id={rate.id}>
-                                <td>
-                                    {rate.type}
-                                </td>
-                                <td>
-                                    {rate.personnel_consultation}
-                                </td>
-                                <td>
-                                    {rate.personnel_design}
-                                </td>
-                                <td>
-                                    {rate.wet_lab}
-                                </td>
-                                <td>
-                                    {rate.imaging}
-                                </td>
-                            </tr>
-                        ))}
+                        <tr id="consultation">
+                            <td>Consultation</td>
+                            <td>$100 - $400</td>
+                        </tr>
+                        <tr id="prototype_design">
+                            <td>Prototype Biosensor Design</td>
+                            <td>$200 - $500</td>
+                        </tr>
+                        <tr id="prototype_construction">
+                            <td>Prototype Biosensor Construction</td>
+                            <td>$400 - $800</td>
+                        </tr>
+                        <tr id="vitro">
+                            <td>Biosensor Characterization (in vitro)</td>
+                            <td>$1,200 - $2,600</td>
+                        </tr>
+                        <tr id="cellulo">
+                            <td>Biosensor Characterization (in cellulo)</td>
+                            <td>$1,600 - $3,100</td>
+                        </tr>
+                        <tr id="optimization">
+                            <td>Full-Scale Biosensor Optimization</td>
+                            <td>$2,900 - $5,700</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
