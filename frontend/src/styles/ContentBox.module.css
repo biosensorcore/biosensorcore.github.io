@@ -12,11 +12,11 @@
 }
 
 .content_box_wrapper {
-    flex-basis: 33%;
-    width: 33%;
+    flex-basis: 25%;
+    width: 25%;
     flex-shrink: 0;
     min-height: 300px;
-    padding: 2%;
+    padding: 1.5%;
     transition: transform 0.2s ease;
 }
 
@@ -81,6 +81,13 @@
 .content_box_text p {
     margin: 0;
     line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+    .content_box_wrapper {
+        width: 50%;
+        flex-basis: 50%;
+    }
 }
 
 @media (max-width: 800px) {
