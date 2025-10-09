@@ -75,7 +75,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     border: 1px solid var(--dark-lighter);
     font-size: 1.2vmax;
 }
@@ -89,6 +89,14 @@
 .table td i,
 .table th i {
     font-style: italic;
+}
+
+.table_footnote {
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    color: #666;
 }
 
 .table tbody tr:nth-child(odd) {

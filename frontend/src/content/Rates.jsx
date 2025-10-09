@@ -60,7 +60,7 @@ function Rates() {
                         </tr>
                     </tbody>
                 </table>
-                <p><em>* Rates are provisional and subject to change.</em></p>
+                <p className={styles.table_footnote}>* Rates are provisional and subject to change.</p>
             </div>
             
             <div className={content.content_default}>
@@ -114,7 +114,7 @@ function Rates() {
                         </tr>
                     </tbody>
                 </table>
-                <p><em>* Rates are provisional and subject to change.</em></p>
+                <p className={styles.table_footnote}>* Rates are provisional and subject to change.</p>
             </div>
             
             <div className={content.content_default}>
