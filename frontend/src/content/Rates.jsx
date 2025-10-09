@@ -65,7 +65,7 @@ function Rates() {
             
             <div className={content.content_default}>
                 <h3>Project Cost Estimates</h3>
-                <p><em>Note: Total cost ranges below include hourly charges only. Additional supply costs may apply (see Supply Costs table).</em></p>
+                <p><em>Note: Total cost range estimates below include hourly charges only. Additional supply costs may apply (see Supply Costs table).</em></p>
                 <table className={styles.table}>
                     <thead>
                         <tr>
@@ -118,7 +118,7 @@ function Rates() {
             </div>
             
             <div className={content.content_default}>
-                <h3>Supply Costs</h3>
+                <h3>CommonSupply Costs</h3>
                 <table className={`${styles.table} ${styles.supply_costs_table}`}>
                     <thead>
                         <tr>
@@ -134,9 +134,9 @@ function Rates() {
                             <td>Lab supplies + sequencing costs for constructing 1 simple plasmid (1 insert)</td>
                         </tr>
                         <tr>
-                            <td><p>In Vitro Characterization Supplies</p> (1 biosensor)</td>
+                            <td><p><i>in vitro</i> Characterization Supplies</p> (1 biosensor)</td>
                             <td>$500</td>
-                            <td>Lab supplies for purifying and characterizing 1 biosensor in vitro (E. coli expression)</td>
+                            <td>Lab supplies for purifying and characterizing 1 biosensor <i>in vitro</i> (<i>E. coli</i> expression)</td>
                         </tr>
                         <tr>
                             <td><p>Imaging Supplies</p> (1 construct)</td>
