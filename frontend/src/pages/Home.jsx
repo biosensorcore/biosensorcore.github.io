@@ -28,7 +28,7 @@ function Home() {
             <div className={`${content.content_section}`}>
                 <div className={styles.about_section}>
                     <button onClick={() => {window.location.href="/about"}}>ABOUT US</button>
-                    <p className={styles.wid}>The UCSD Biosensor Core, inspired by Roger Tsien’s pioneering work, provides support for the use and development of genetically encoded biosensors, including fluorescent and bioluminescent indicators and optogenetic tools. </p>
+                    <p className={styles.wid}>The UCSD Biosensor Core is an integral component of the DRC Biological Imaging Core, supported by the UCSD/UCLA NIDDK Diabetes Research Center (P30 DK063491). Inspired by Roger Tsien’s pioneering work, provides support for the use and development of genetically encoded biosensors, including fluorescent and bioluminescent indicators and optogenetic tools. </p>
                 </div>
             </div>
             <div className={styles.mission_section}>
