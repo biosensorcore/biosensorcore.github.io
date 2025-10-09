@@ -83,13 +83,13 @@ function Rates() {
                             <td>$250 - $1,000</td>
                         </tr>
                         <tr id="prototype_design">
-                            <td>Prototype Biosensor Design</td>
+                            <td>Prototype Biosensor Design (single target)</td>
                             <td>$200 - $500</td>
                             <td>$290 - $725</td>
                             <td>$500 - $1,250</td>
                         </tr>
                         <tr id="prototype_construction">
-                            <td>Prototype Biosensor Construction</td>
+                            <td>Prototype Biosensor Construction (single target)</td>
                             <td>$400 - $800</td>
                             <td>$580 - $1,160</td>
                             <td>$1,000 - $2,000</td>
