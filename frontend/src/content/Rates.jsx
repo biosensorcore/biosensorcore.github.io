@@ -47,7 +47,7 @@ function Rates() {
                             <td>$250/hr</td>
                         </tr>
                         <tr>
-                            <td>Imaging (full-service)</td>
+                            <td>Live-Cell Imaging (full-service)</td>
                             <td>$150/hr</td>
                             <td>$218/hr</td>
                             <td>$375/hr</td>
@@ -107,7 +107,7 @@ function Rates() {
                             <td>$4,000 - $7,750</td>
                         </tr>
                         <tr id="optimization">
-                            <td>Full-Scale Biosensor Optimization</td>
+                            <td>Full-Scale Biosensor Optimization (single target)</td>
                             <td>$2,900 - $5,700</td>
                             <td>$4,205 - $8,265</td>
                             <td>$7,250 - $14,250</td>
