@@ -61,7 +61,7 @@ function Rates() {
                     </tbody>
                 </table>
                 <p className={styles.table_footnote}>* Rates are provisional and subject to change.</p>
-                <p className={styles.table_footnote}>** An initial 30-minute meeting is complimentary for all Academic users.</p>
+                <p className={styles.table_footnote}>** An initial 30-minute meeting is complimentary for all academic users.</p>
             </div>
             
             <div className={content.content_default}>
