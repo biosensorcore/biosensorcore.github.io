@@ -118,12 +118,13 @@ function Rates() {
             </div>
             
             <div className={content.content_default}>
-                <h3>CommonSupply Costs</h3>
+                <h3>Common Supply Costs</h3>
                 <table className={`${styles.table} ${styles.supply_costs_table}`}>
                     <thead>
                         <tr>
                             <th>Supply Category</th>
-                            <th>Unit Cost</th>
+                            <th>UCSD Unit Cost</th>
+                            <th>Non-UCSD Academic Unit Cost</th>
                             <th>Description</th>
                         </tr>
                     </thead>
@@ -131,30 +132,36 @@ function Rates() {
                         <tr>
                             <td><p>PCR/Gibson Supplies</p> (1 construct)</td>
                             <td>$400</td>
+                            <td>$580</td>
                             <td>Lab supplies + sequencing costs for constructing 1 simple plasmid (1 insert)</td>
                         </tr>
                         <tr>
                             <td><p><i>in vitro</i> Characterization Supplies</p> (1 biosensor)</td>
                             <td>$500</td>
+                            <td>$725</td>
                             <td>Lab supplies for purifying and characterizing 1 biosensor <i>in vitro</i> (<i>E. coli</i> expression)</td>
                         </tr>
                         <tr>
                             <td><p>Imaging Supplies</p> (1 construct)</td>
                             <td>$600</td>
+                            <td>$870</td>
                             <td>Lab supplies for maintaining 1 standard mammalian cell line for 1 week and performing 4 imaging experiments (~3h per experiment session)</td>
                         </tr>
                         <tr>
                             <td><p>Gene synthesis</p> (per base)</td>
                             <td>$0.07</td>
+                            <td>$0.10</td>
                             <td>Cost per-base for synthesizing genes for plasmid construction (using Gibson and in-hand vector)</td>
                         </tr>
                         <tr>
                             <td><p>Whole-plasmid synthesis</p> (1 plasmid)</td>
                             <td>$100</td>
+                            <td>$145</td>
                             <td>Additional cost for full synthesis whole plasmids (for complex constructs and/or custom vectors)</td>
                         </tr>
                     </tbody>
                 </table>
+                <p className={styles.table_footnote}>* Supply costs for commercial users will be included in contract negotiations.</p>
             </div>
             
             <div className={content.content_default}>
