@@ -1,13 +1,16 @@
 {
     "people": [{
         "name": "Alexandra Newton",
-        "bio": "Ph.D., Core Director"
+        "bio": "Ph.D., Director, Biological Imaging Core"
     }, {
         "name": "Nathan Shaner",
-        "bio": "Ph.D., Core Manager"
+        "bio": "Ph.D., Managing Director, Biosensor Core"
     }, {
         "name": "Gerard Lambert",
-        "bio": "Biosensor Specialist"
+        "bio": "M.A., Live-cell Imaging and Biosensor Specialist"
+    }, {
+        "name": "Ryan Dogoldogol",
+        "bio": "M.S., Technician, Biosensor Core"
     }],
     "advisory_board": [{
             "name": "Alexandra C. Newton, Ph.D.",
