@@ -83,13 +83,13 @@ function Rates() {
                             <td>$250 - $1,000</td>
                         </tr>
                         <tr id="prototype_design">
-                            <td>Prototype Biosensor Design (single target)</td>
+                            <td>Prototype Biosensor Design (one target)</td>
                             <td>$200 - $500</td>
                             <td>$290 - $725</td>
                             <td>$500 - $1,250</td>
                         </tr>
                         <tr id="prototype_construction">
-                            <td>Prototype Biosensor Construction (single target)</td>
+                            <td>Prototype Biosensor Construction (one plasmid)</td>
                             <td>$400 - $800</td>
                             <td>$580 - $1,160</td>
                             <td>$1,000 - $2,000</td>
@@ -102,15 +102,15 @@ function Rates() {
                         </tr>
                         <tr id="cellulo">
                             <td>Biosensor Characterization (<i>in cellulo</i>)</td>
-                            <td>$1,600 - $3,100</td>
-                            <td>$2,320 - $4,495</td>
-                            <td>$4,000 - $7,750</td>
+                            <td>$1,800 - $4,900</td>
+                            <td>$2,610 - $7,105</td>
+                            <td>$4,500 - $12,250</td>
                         </tr>
                         <tr id="optimization">
-                            <td>Full-Scale Biosensor Optimization (single target)</td>
-                            <td>$2,900 - $5,700</td>
-                            <td>$4,205 - $8,265</td>
-                            <td>$7,250 - $14,250</td>
+                            <td>Full-Scale Biosensor Optimization (one scaffold)</td>
+                            <td>$3,000 - $9,000</td>
+                            <td>$4,350 - $13,050</td>
+                            <td>$7,500 - $22,500</td>
                         </tr>
                     </tbody>
                 </table>
