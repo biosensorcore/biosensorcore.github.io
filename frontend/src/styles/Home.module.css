@@ -86,6 +86,11 @@
     text-align: left;
 }
 
+.table td i,
+.table th i {
+    font-style: italic;
+}
+
 .table tbody tr:nth-child(odd) {
     background-color: var(--light-blue);
 }
