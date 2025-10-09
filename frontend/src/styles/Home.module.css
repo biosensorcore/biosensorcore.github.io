@@ -99,6 +99,16 @@
     color: #666;
 }
 
+.table td:nth-child(3) {
+    font-size: 0.8em;
+}
+
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    min-width: 120px;
+    white-space: nowrap;
+}
+
 .table tbody tr:nth-child(odd) {
     background-color: var(--light-blue);
 }
