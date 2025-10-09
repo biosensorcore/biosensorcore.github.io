@@ -48,10 +48,12 @@
     height: 30%;
     width: 100%;
     overflow: hidden;
+    aspect-ratio: 1;
 }
 
 .content_box_image_container.content_box_short {
     height: 70%;
+    aspect-ratio: 1;
 }
 
 .content_box_image_container img {
