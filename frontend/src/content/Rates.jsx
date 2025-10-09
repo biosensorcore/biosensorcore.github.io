@@ -39,7 +39,7 @@ function Rates() {
                             <td>$100/hr</td>
                         </tr>
                         <tr>
-                            <td>Imaging (assisted/full-service)</td>
+                            <td>Imaging (full-service)</td>
                             <td>$150/hr</td>
                         </tr>
                     </tbody>
@@ -70,11 +70,11 @@ function Rates() {
                             <td>$400 - $800</td>
                         </tr>
                         <tr id="vitro">
-                            <td>Biosensor Characterization (in vitro)</td>
+                            <td>Biosensor Characterization (<i>in vitro</i>)</td>
                             <td>$1,200 - $2,600</td>
                         </tr>
                         <tr id="cellulo">
-                            <td>Biosensor Characterization (in cellulo)</td>
+                            <td>Biosensor Characterization (<i>in cellulo</i>)</td>
                             <td>$1,600 - $3,100</td>
                         </tr>
                         <tr id="optimization">
@@ -97,7 +97,7 @@ function Rates() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>PCR/Gibson Supplies (1 construct)</td>
+                            <td><p>PCR/Gibson Supplies</p> (1 construct)</td>
                             <td>$400</td>
                             <td>Lab supplies + sequencing costs for constructing 1 simple plasmid (1 insert)</td>
                         </tr>
