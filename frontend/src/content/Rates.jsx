@@ -42,6 +42,10 @@ function Rates() {
                             <td>Imaging (full-service)</td>
                             <td>$150/hr</td>
                         </tr>
+                        <tr>
+                            <td>Imaging (Nikon Imaging Center)</td>
+                            <td><a href="https://nic.ucsd.edu/rates/index.html" target="_blank" rel="noopener noreferrer">https://nic.ucsd.edu/rates/index.html</a></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
