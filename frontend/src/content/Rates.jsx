@@ -102,22 +102,22 @@ function Rates() {
                             <td>Lab supplies + sequencing costs for constructing 1 simple plasmid (1 insert)</td>
                         </tr>
                         <tr>
-                            <td>In Vitro Characterization Supplies (1 biosensor)</td>
+                            <td><p>In Vitro Characterization Supplies</p> (1 biosensor)</td>
                             <td>$500</td>
                             <td>Lab supplies for purifying and characterizing 1 biosensor in vitro (E. coli expression)</td>
                         </tr>
                         <tr>
-                            <td>Imaging Supplies (1 construct)</td>
+                            <td><p>Imaging Supplies</p> (1 construct)</td>
                             <td>$600</td>
                             <td>Lab supplies for maintaining 1 standard mammalian cell line for 1 week and performing 4 imaging experiments (~3h per experiment session)</td>
                         </tr>
                         <tr>
-                            <td>Gene synthesis (per base)</td>
+                            <td><p>Gene synthesis</p> (per base)</td>
                             <td>$0.07</td>
                             <td>Cost per-base for synthesizing genes for plasmid construction (using Gibson and in-hand vector)</td>
                         </tr>
                         <tr>
-                            <td>Whole-plasmid synthesis (1 plasmid)</td>
+                            <td><p>Whole-plasmid synthesis</p> (1 plasmid)</td>
                             <td>$100</td>
                             <td>Additional cost for full synthesis whole plasmids (for complex constructs and/or custom vectors)</td>
                         </tr>
