@@ -54,9 +54,9 @@ function Rates() {
                         </tr>
                         <tr>
                             <td>Imaging (Nikon Imaging Center)</td>
+                            <td></td>
                             <td><a href="https://nic.ucsd.edu/rates/index.html" target="_blank" rel="noopener noreferrer">https://nic.ucsd.edu/rates/index.html</a></td>
-                            <td>-</td>
-                            <td>-</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
