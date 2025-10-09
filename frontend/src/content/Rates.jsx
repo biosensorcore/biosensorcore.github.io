@@ -29,19 +29,19 @@ function Rates() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Personnel - Consultation</td>
+                            <td>Consultation</td>
                             <td>$100/hr</td>
                             <td>$145/hr</td>
                             <td>$250/hr</td>
                         </tr>
                         <tr>
-                            <td>Personnel - Design & Analysis</td>
+                            <td>Sensor Design & Data Analysis</td>
                             <td>$100/hr</td>
                             <td>$145/hr</td>
                             <td>$250/hr</td>
                         </tr>
                         <tr>
-                            <td>Wet Lab</td>
+                            <td>Wet Lab Work</td>
                             <td>$100/hr</td>
                             <td>$145/hr</td>
                             <td>$250/hr</td>
