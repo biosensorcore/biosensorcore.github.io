@@ -94,13 +94,12 @@
 .table_footnote {
     font-style: italic;
     margin-top: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     font-size: 0.9em;
     color: #666;
 }
 
-.table_footnote + .table_footnote {
-    margin-top: 2px;
+.table_footnote:last-of-type {
     margin-bottom: 30px;
 }
 
