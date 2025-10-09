@@ -119,7 +119,7 @@ function Rates() {
             
             <div className={content.content_default}>
                 <h3>Supply Costs</h3>
-                <table className={styles.table}>
+                <table className={`${styles.table} ${styles.supply_costs_table}`}>
                     <thead>
                         <tr>
                             <th>Supply Category</th>
