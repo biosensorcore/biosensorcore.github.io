@@ -103,6 +103,10 @@
     font-size: 0.8em;
 }
 
+.supply_costs_table td:nth-child(1) {
+    white-space: nowrap;
+}
+
 .table th:nth-child(2),
 .table td:nth-child(2) {
     min-width: 120px;
