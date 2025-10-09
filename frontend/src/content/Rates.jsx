@@ -123,8 +123,8 @@ function Rates() {
                     <thead>
                         <tr>
                             <th>Supply Category</th>
-                            <th>UCSD Unit Cost</th>
-                            <th>Non-UCSD Academic Unit Cost</th>
+                            <th><p>UCSD</p> Unit Cost</th>
+                            <th><p>Non-UCSD Academic</p> Unit Cost</th>
                             <th>Description</th>
                         </tr>
                     </thead>
