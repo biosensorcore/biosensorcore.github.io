@@ -74,9 +74,16 @@
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     border: 1px solid var(--dark-lighter);
-    font-size: 1.7vmax;
+    font-size: 1.2vmax;
+}
+
+.table th,
+.table td {
+    padding: 15px 20px;
+    text-align: left;
 }
 
 .table tbody tr:nth-child(odd) {
