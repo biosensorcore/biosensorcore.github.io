@@ -172,17 +172,18 @@
     }
     
     .table {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         table-layout: fixed;
         width: 100%;
     }
     
     .table th,
     .table td {
-        padding: 4px 6px;
+        padding: 3px 4px;
         word-wrap: break-word;
         overflow-wrap: break-word;
         white-space: normal;
+        hyphens: none;
     }
     
     /* Specific column widths for different tables */
@@ -215,5 +216,38 @@
     .service_categories_table th:nth-child(2),
     .service_categories_table td:nth-child(2) {
         width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .table {
+        font-size: 0.7rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 2px 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table {
+        font-size: 0.65rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 2px 2px;
+    }
+    
+    /* Adjust column widths for very small screens */
+    .service_categories_table th:nth-child(1),
+    .service_categories_table td:nth-child(1) {
+        width: 25%;
+    }
+    
+    .service_categories_table th:nth-child(2),
+    .service_categories_table td:nth-child(2) {
+        width: 75%;
     }
 }
