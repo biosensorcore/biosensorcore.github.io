@@ -114,7 +114,7 @@
     width: 100%;
     flex-direction: column;
     padding: 0% 4% 5% 4%;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .content_box_wrapper_resources {
