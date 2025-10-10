@@ -14,9 +14,11 @@ function DefaultPage({page}) {
         const headerHeight = window.innerHeight * 0.2; // 20vh
         const navbarHeight = 56; // Bootstrap navbar height
         const contentHeaderHeight = 64; // Approximate height of content header with padding
-        const extraSpace = isHomePage ? 200 : 0; // Extra space for Home page to show more background
         
-        const totalOffset = headerHeight + navbarHeight + contentHeaderHeight + extraSpace;
+        // For Home page, reduce the offset to show more of the background image
+        const backgroundOffset = isHomePage ? -100 : 0; // Negative offset to show more background
+        
+        const totalOffset = headerHeight + navbarHeight + contentHeaderHeight + backgroundOffset;
         setOffsetTop(totalOffset);
     }, [isHomePage]);
 
