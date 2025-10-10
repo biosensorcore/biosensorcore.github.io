@@ -39,7 +39,7 @@ function Resources() {
     return  <>
         <div className={styles.content_header}>Resources</div>
         <div className={styles.content_main}>
-            <ContentBoxGroup contentBoxes={content}/>
+            <ContentBoxGroup contentBoxes={content} variant="resources"/>
         </div>
     </>
 }
