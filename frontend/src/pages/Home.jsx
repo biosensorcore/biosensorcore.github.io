@@ -16,8 +16,7 @@ function Home() {
     return (<>
         
         <div>
-            <div className={styles.banner_image}>
-            {/* <div className={styles.banner_image + (isLoaded ? styles.fade_in : "")}> */}
+            <div className={styles.banner_text_container}>
                 <div className={`${styles.banner_text} ${isLoaded ? styles.fade_in : ""}`}>
                     <h2>BIOSENSOR CORE</h2>
                 </div>

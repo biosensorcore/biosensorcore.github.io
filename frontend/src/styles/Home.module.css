@@ -10,18 +10,16 @@
     opacity: 1;
 } */
 
-.banner_image {
+.banner_text_container {
     width: 100%;
     min-height: 70vh;
-    background-image: url("../../public/images/banner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner_text {
-    position: absolute;
-    top: 50%;
     transform: scale(0.9);
     color: var(--navy-blue);
     text-align: center;
