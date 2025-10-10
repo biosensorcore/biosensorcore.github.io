@@ -61,6 +61,9 @@ function Gallery() {
             <div className={content.video_gallery}>
             {videos.map((video) => (
                 <div key={video.id.videoId} className={content.video_box}>
+                    <div className={content.video_text}>
+                        <h3 className={content.video_title}>{video.snippet.title}</h3>
+                    </div>
                     <div className={content.video_container}>
                         <div 
                             className={content.video_thumbnail}
@@ -95,7 +98,6 @@ function Gallery() {
                         </div>
                     </div>
                     <div className={content.video_text}>
-                        <h3 className={content.video_title}>{video.snippet.title}</h3>
                         <p className={content.video_description}>
                             {video.snippet.description}
                             {video.snippet.description.endsWith('...') && (
