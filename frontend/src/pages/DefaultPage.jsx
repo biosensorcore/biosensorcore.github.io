@@ -41,7 +41,7 @@ function DefaultPage({page}) {
     }, [location.pathname]);
 
     const backgroundStyle = {
-        position: 'fixed',
+        position: 'absolute',
         top: headerHeight,
         left: 0,
         width: '100%',
@@ -50,13 +50,12 @@ function DefaultPage({page}) {
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
         zIndex: -2,
         pointerEvents: 'none'
     };
 
     const overlayStyle = {
-        position: 'fixed',
+        position: 'absolute',
         top: headerHeight,
         left: 0,
         width: '100%',
