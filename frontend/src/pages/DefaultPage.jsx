@@ -1,9 +1,12 @@
 import Header from "../components/Header";
 import HeaderNavbar from "../components/HeaderNavbar";
 import Footer from "../components/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 function DefaultPage({page}) {
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
+
     const backgroundStyle = {
         backgroundImage: 'url(/images/banner.jpg)',
         backgroundRepeat: 'no-repeat',
@@ -25,7 +28,7 @@ function DefaultPage({page}) {
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        backgroundColor: isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)',
         zIndex: -1,
         pointerEvents: 'none'
     };
