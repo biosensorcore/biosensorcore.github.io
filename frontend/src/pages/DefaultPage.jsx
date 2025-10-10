@@ -9,6 +9,14 @@ function DefaultPage({page}) {
     const isHomePage = location.pathname === '/';
 
     useEffect(() => {
+        // Apply background image to body
+        document.body.style.backgroundImage = 'url(/images/banner.jpg)';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundAttachment = 'fixed';
+        
+        // Add overlay class for conditional styling
         if (isHomePage) {
             document.body.classList.add('home-page');
         } else {
