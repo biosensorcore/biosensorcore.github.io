@@ -2,47 +2,25 @@ import Header from "../components/Header";
 import HeaderNavbar from "../components/HeaderNavbar";
 import Footer from "../components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function DefaultPage({page}) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
 
-    const pageStyle = {
-        backgroundImage: 'url(/images/banner.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        minHeight: '100vh',
-        position: 'relative'
-    };
-
-    const overlayStyle = {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundColor: isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)',
-        zIndex: 0,
-        pointerEvents: 'none'
-    };
-
-    const contentStyle = {
-        position: 'relative',
-        zIndex: 1
-    };
+    useEffect(() => {
+        if (isHomePage) {
+            document.body.classList.add('home-page');
+        } else {
+            document.body.classList.remove('home-page');
+        }
+    }, [isHomePage]);
 
     return <>
-        <div style={pageStyle}>
-            <div style={overlayStyle}></div>
-            <div style={contentStyle}>
-                <Header />
-                <HeaderNavbar />
-                <Outlet />
-                <Footer />
-            </div>
-        </div>
+        <Header />
+        <HeaderNavbar />
+        <Outlet />
+        <Footer />
     </>
     
 }
