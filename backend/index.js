@@ -24,6 +24,9 @@ let cached = {
 }
 
 app.get("/latest_videos", async(req, res) => {
+    // Add debug logging
+    console.log('Cache time:', cached.time, 'Current time:', Date.now(), 'Refresh needed:', Date.now() - cached.time > refresh_window);
+    
     if (Date.now() - cached.time > refresh_window) {
         try {
             // First, get the video IDs from search
@@ -40,6 +43,12 @@ app.get("/latest_videos", async(req, res) => {
                 `https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&id=${videoIds}&part=snippet`
             );
             const videosData = await videosResp.json();
+            
+            // Debug: Log description lengths
+            console.log('Videos API response:', videosData.items.length, 'videos');
+            videosData.items.forEach((video, index) => {
+                console.log(`Video ${index + 1}: Description length: ${video.snippet.description.length} chars`);
+            });
             
             // Use only the videos API data which has complete descriptions
             const videosWithFullDescriptions = videosData.items.map(video => ({
@@ -71,6 +80,15 @@ app.get("/latest_videos", async(req, res) => {
         }
     }
     res.json(cached);
+});
+
+// Force refresh endpoint for debugging
+app.get("/latest_videos/refresh", async(req, res) => {
+    console.log('Force refresh requested');
+    cached.time = 0; // Force cache refresh
+    const resp = await fetch(`http://localhost:${SERVER_PORT}/latest_videos`);
+    const data = await resp.json();
+    res.json(data);
 });
 
 app.listen(SERVER_PORT, () => {

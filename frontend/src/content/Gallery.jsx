@@ -18,7 +18,11 @@ function Gallery() {
     const [videos, setVideos] = useState([]);
 
     const loadVideos = async () => {
-        const resp = await axios.get(`${APP_URL}/latest_videos`);
+        // Add cache-busting parameter to force fresh data
+        const timestamp = Date.now();
+        const resp = await axios.get(`${APP_URL}/latest_videos?t=${timestamp}`);
+        console.log('Fetched videos:', resp.data.videos.length);
+        console.log('First video description length:', resp.data.videos[0]?.snippet?.description?.length || 'N/A');
         setVideos(resp.data.videos);
     }
 
