@@ -2,16 +2,28 @@ import Header from "../components/Header";
 import HeaderNavbar from "../components/HeaderNavbar";
 import Footer from "../components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function DefaultPage({page}) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
+    const [offsetTop, setOffsetTop] = useState(0);
+
+    useEffect(() => {
+        // Calculate the total height of header + navbar + content header
+        const headerHeight = window.innerHeight * 0.2; // 20vh
+        const navbarHeight = 56; // Bootstrap navbar height
+        const contentHeaderHeight = 64; // Approximate height of content header with padding
+        
+        const totalOffset = headerHeight + navbarHeight + contentHeaderHeight;
+        setOffsetTop(totalOffset);
+    }, []);
 
     const pageWrapperStyle = {
         backgroundImage: 'url(/images/banner.jpg)',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: `center ${offsetTop}px`,
         backgroundAttachment: 'fixed',
         minHeight: '100vh',
         position: 'relative'
