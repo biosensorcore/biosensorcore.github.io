@@ -93,6 +93,11 @@
 
 .service_categories_table {
     table-layout: fixed;
+    width: 100%;
+}
+
+.service_categories_table td {
+    vertical-align: top;
 }
 
 .service_categories_table th:nth-child(1),
@@ -108,6 +113,8 @@
     white-space: normal;
     overflow-wrap: break-word;
     hyphens: auto;
+    overflow: hidden;
+    max-width: 70%;
 }
 
 
