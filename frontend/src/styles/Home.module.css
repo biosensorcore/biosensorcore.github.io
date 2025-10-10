@@ -170,4 +170,44 @@
     .banner_text h2 {
         font-size: 3rem;
     }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 5px 8px;
+    }
+    
+    .service_categories_table th:nth-child(1),
+    .service_categories_table td:nth-child(1) {
+        width: 25%;
+    }
+    
+    .service_categories_table th:nth-child(2),
+    .service_categories_table td:nth-child(2) {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    .table {
+        font-size: 0.8rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 4px 6px;
+    }
+    
+    .service_categories_table th:nth-child(1),
+    .service_categories_table td:nth-child(1) {
+        width: 20%;
+    }
+    
+    .service_categories_table th:nth-child(2),
+    .service_categories_table td:nth-child(2) {
+        width: 80%;
+    }
 }
