@@ -5,8 +5,8 @@ function Resources() {
 
     const content = [
         {
-            header: "Fluorescent Biosensor Database",
-            text: "The Fluorescent Biosensor Database is a repository of the array of fluorescent biosensors developed to study cell signaling in live cells. This database has been designed to be a community driven resource that can be updated and revised to maintain both a historical and current view of fluorescent biosensor tools.",
+            header: "Biosensor Database",
+            text: "The Biosensor Database is a repository of the array of fluorescent biosensors developed to study cell signaling in live cells. This database has been designed to be a community driven resource that can be updated and revised to maintain both a historical and current view of fluorescent biosensor tools. Over time, the database has grown to include a large number of bioluminescent and BRET biosensors as well.",
             img: "bsdb.jpeg",
             url: "https://biosensordb.ucsd.edu/index.php"
         },
