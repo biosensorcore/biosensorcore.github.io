@@ -217,6 +217,30 @@
     .service_categories_table td:nth-child(2) {
         width: 70%;
     }
+    
+    /* Supply Costs table specific */
+    .supply_costs_table th:nth-child(1),
+    .supply_costs_table td:nth-child(1) {
+        width: 35%;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .supply_costs_table th:nth-child(2),
+    .supply_costs_table td:nth-child(2) {
+        width: 15%;
+    }
+    
+    .supply_costs_table th:nth-child(3),
+    .supply_costs_table td:nth-child(3) {
+        width: 15%;
+    }
+    
+    .supply_costs_table th:nth-child(4),
+    .supply_costs_table td:nth-child(4) {
+        width: 35%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -227,6 +251,27 @@
     .table th,
     .table td {
         padding: 2px 3px;
+    }
+    
+    /* Supply Costs table adjustments for smaller screens */
+    .supply_costs_table th:nth-child(1),
+    .supply_costs_table td:nth-child(1) {
+        width: 40%;
+    }
+    
+    .supply_costs_table th:nth-child(2),
+    .supply_costs_table td:nth-child(2) {
+        width: 12%;
+    }
+    
+    .supply_costs_table th:nth-child(3),
+    .supply_costs_table td:nth-child(3) {
+        width: 12%;
+    }
+    
+    .supply_costs_table th:nth-child(4),
+    .supply_costs_table td:nth-child(4) {
+        width: 36%;
     }
 }
 
@@ -249,5 +294,26 @@
     .service_categories_table th:nth-child(2),
     .service_categories_table td:nth-child(2) {
         width: 75%;
+    }
+    
+    /* Supply Costs table adjustments for very small screens */
+    .supply_costs_table th:nth-child(1),
+    .supply_costs_table td:nth-child(1) {
+        width: 45%;
+    }
+    
+    .supply_costs_table th:nth-child(2),
+    .supply_costs_table td:nth-child(2) {
+        width: 10%;
+    }
+    
+    .supply_costs_table th:nth-child(3),
+    .supply_costs_table td:nth-child(3) {
+        width: 10%;
+    }
+    
+    .supply_costs_table th:nth-child(4),
+    .supply_costs_table td:nth-child(4) {
+        width: 35%;
     }
 }
