@@ -9,11 +9,13 @@ function ContentBox({content}) {
                 {img ? <div className={`${styles.content_box_image_container} ${short ? styles.content_box_short : ""}`}>
                     <img src={`images/${img}`} alt={header || "Content image"}/>
                 </div> : null}
-                <div className={styles.content_box_header}>
-                    <h5>{header}</h5>
-                </div>
-                <div className={`${styles.content_box_text} ${short ? styles.content_box_short : ""}`}>
-                    <p>{text}</p>
+                <div className={styles.content_box_content}>
+                    <div className={styles.content_box_header}>
+                        <h5>{header}</h5>
+                    </div>
+                    <div className={`${styles.content_box_text} ${short ? styles.content_box_short : ""}`}>
+                        <p>{text}</p>
+                    </div>
                 </div>
             </div>
         )
