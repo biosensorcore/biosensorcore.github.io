@@ -25,36 +25,49 @@ let cached = {
 
 app.get("/latest_videos", async(req, res) => {
     if (Date.now() - cached.time > refresh_window) {
-        // First, get the video IDs from search
-        const searchResp = await fetch(
-            `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
-        );
-        const searchData = (await searchResp.json()).items.filter((result) => result.id.kind === "youtube#video");
-        
-        // Extract video IDs
-        const videoIds = searchData.map(video => video.id.videoId).join(',');
-        
-        // Get full video details including complete descriptions
-        const videosResp = await fetch(
-            `https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&id=${videoIds}&part=snippet,contentDetails`
-        );
-        const videosData = await videosResp.json();
-        
-        // Merge search results with full video details
-        const enrichedVideos = searchData.map(searchVideo => {
-            const fullVideo = videosData.items.find(v => v.id === searchVideo.id.videoId);
-            return {
-                ...searchVideo,
+        try {
+            // First, get the video IDs from search
+            const searchResp = await fetch(
+                `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
+            );
+            const searchData = (await searchResp.json()).items.filter((result) => result.id.kind === "youtube#video");
+            
+            // Extract video IDs
+            const videoIds = searchData.map(video => video.id.videoId).join(',');
+            
+            // Get full video details including complete descriptions
+            const videosResp = await fetch(
+                `https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&id=${videoIds}&part=snippet`
+            );
+            const videosData = await videosResp.json();
+            
+            // Use only the videos API data which has complete descriptions
+            const videosWithFullDescriptions = videosData.items.map(video => ({
+                id: { videoId: video.id },
                 snippet: {
-                    ...searchVideo.snippet,
-                    description: fullVideo ? fullVideo.snippet.description : searchVideo.snippet.description
+                    title: video.snippet.title,
+                    description: video.snippet.description,
+                    thumbnails: video.snippet.thumbnails,
+                    publishedAt: video.snippet.publishedAt,
+                    channelTitle: video.snippet.channelTitle
                 }
-            };
-        });
-        
-        cached = {
-            videos: enrichedVideos,
-            time: Date.now()
+            }));
+            
+            cached = {
+                videos: videosWithFullDescriptions,
+                time: Date.now()
+            }
+        } catch (error) {
+            console.error('Error fetching videos:', error);
+            // Fallback to search API if videos API fails
+            const searchResp = await fetch(
+                `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
+            );
+            const searchData = (await searchResp.json()).items.filter((result) => result.id.kind === "youtube#video");
+            cached = {
+                videos: searchData,
+                time: Date.now()
+            }
         }
     }
     res.json(cached);
