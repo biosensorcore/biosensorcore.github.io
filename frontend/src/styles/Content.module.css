@@ -79,6 +79,25 @@
     word-wrap: break-word;
 }
 
+.read_more_link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5px;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease;
+}
+
+.read_more_link:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
 .iframe {
     width: 360px;
     height: 215px;

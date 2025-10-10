@@ -52,7 +52,19 @@ function Gallery() {
                     </div>
                     <div className={content.video_text}>
                         <h3 className={content.video_title}>{video.snippet.title}</h3>
-                        <p className={content.video_description}>{video.snippet.description}</p>
+                        <p className={content.video_description}>
+                            {video.snippet.description}
+                            {video.snippet.description.endsWith('...') && (
+                                <a 
+                                    href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={content.read_more_link}
+                                >
+                                    Read more on YouTube
+                                </a>
+                            )}
+                        </p>
                     </div>
                 </div>
             ))}
