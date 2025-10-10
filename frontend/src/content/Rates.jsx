@@ -1,4 +1,3 @@
-import ContentBoxGroup from "../components/ContentBoxGroup";
 import content from "../styles/Content.module.css";
 import styles from "../styles/Home.module.css";
 
@@ -6,12 +5,6 @@ import RateJSON from "../util/rates.json";
 
 
 function Rates() {
-    const categories = RateJSON.rates.map(rate => {return {
-        header: rate.type,
-        text: rate.description,
-        short: true,
-        url: `#${rate.id}`
-    }});
 
     return <>
         <div className={content.content_header}>Rates & Services</div>
@@ -167,8 +160,23 @@ function Rates() {
             
             <div className={content.content_default}>
                 <h3>Service Categories</h3>
+                <table className={styles.table}>
+                    <thead>
+                        <tr>
+                            <th>Service Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {RateJSON.rates.map((rate) => (
+                            <tr key={rate.id} id={rate.id}>
+                                <td>{rate.type}</td>
+                                <td>{rate.description}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
-            <ContentBoxGroup contentBoxes={categories}/>
         </div>
     </>;
 }
