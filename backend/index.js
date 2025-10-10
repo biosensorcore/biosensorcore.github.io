@@ -25,12 +25,35 @@ let cached = {
 
 app.get("/latest_videos", async(req, res) => {
     if (Date.now() - cached.time > refresh_window) {
-        const resp = await fetch(
+        // First, get the video IDs from search
+        const searchResp = await fetch(
             `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
         );
-        const data = (await resp.json()).items.filter((result) => result.id.kind === "youtube#video");
+        const searchData = (await searchResp.json()).items.filter((result) => result.id.kind === "youtube#video");
+        
+        // Extract video IDs
+        const videoIds = searchData.map(video => video.id.videoId).join(',');
+        
+        // Get full video details including complete descriptions
+        const videosResp = await fetch(
+            `https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&id=${videoIds}&part=snippet,contentDetails`
+        );
+        const videosData = await videosResp.json();
+        
+        // Merge search results with full video details
+        const enrichedVideos = searchData.map(searchVideo => {
+            const fullVideo = videosData.items.find(v => v.id === searchVideo.id.videoId);
+            return {
+                ...searchVideo,
+                snippet: {
+                    ...searchVideo.snippet,
+                    description: fullVideo ? fullVideo.snippet.description : searchVideo.snippet.description
+                }
+            };
+        });
+        
         cached = {
-            videos: data,
+            videos: enrichedVideos,
             time: Date.now()
         }
     }
