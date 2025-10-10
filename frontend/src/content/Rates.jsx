@@ -10,6 +10,26 @@ function Rates() {
         <div className={content.content_header}>Rates & Services</div>
         <div className={content.content_main}>
             <div className={content.content_default}>
+                <h3>Service Categories</h3>
+                <table className={`${styles.table} ${styles.service_categories_table}`}>
+                    <thead>
+                        <tr>
+                            <th>Service Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {RateJSON.rates.map((rate) => (
+                            <tr key={rate.id} id={rate.id}>
+                                <td>{rate.type}</td>
+                                <td>{rate.description}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            
+            <div className={content.content_default}>
                 <h3>Hourly Rates</h3>
                 <table className={styles.table}>
                     <thead>
@@ -156,26 +176,6 @@ function Rates() {
                     </tbody>
                 </table>
                 <p className={styles.table_footnote}>* Supply costs for commercial users will be included in contract negotiations.</p>
-            </div>
-            
-            <div className={content.content_default}>
-                <h3>Service Categories</h3>
-                <table className={`${styles.table} ${styles.service_categories_table}`}>
-                    <thead>
-                        <tr>
-                            <th>Service Type</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {RateJSON.rates.map((rate) => (
-                            <tr key={rate.id} id={rate.id}>
-                                <td>{rate.type}</td>
-                                <td>{rate.description}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
             </div>
         </div>
     </>;
