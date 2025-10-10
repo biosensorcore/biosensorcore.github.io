@@ -22,7 +22,7 @@
 }
 
 .content_default:first-of-type {
-    padding-top: 2%;
+    padding-top: 1%;
 }
 
 .content_default:not(:first-of-type) {
