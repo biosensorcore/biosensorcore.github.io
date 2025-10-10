@@ -14,7 +14,7 @@ function Home() {
 
 
     return (<>
-        
+        <div className={content.content_header}>Welcome</div>
         <div>
             <div className={styles.banner_text_container}>
                 <div className={`${styles.banner_text} ${isLoaded ? styles.fade_in : ""}`}>
