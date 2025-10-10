@@ -14,10 +14,11 @@ function DefaultPage({page}) {
         const headerHeight = window.innerHeight * 0.2; // 20vh
         const navbarHeight = 56; // Bootstrap navbar height
         const contentHeaderHeight = 64; // Approximate height of content header with padding
+        const extraSpace = isHomePage ? 200 : 0; // Extra space for Home page to show more background
         
-        const totalOffset = headerHeight + navbarHeight + contentHeaderHeight;
+        const totalOffset = headerHeight + navbarHeight + contentHeaderHeight + extraSpace;
         setOffsetTop(totalOffset);
-    }, []);
+    }, [isHomePage]);
 
     const pageWrapperStyle = {
         backgroundImage: 'url(/images/banner.jpg)',
@@ -37,7 +38,8 @@ function DefaultPage({page}) {
         height: '100%',
         backgroundColor: isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)',
         zIndex: 0,
-        pointerEvents: 'none'
+        pointerEvents: 'none',
+        display: isHomePage ? 'none' : 'block' // Completely remove overlay on Home page
     };
 
     const contentStyle = {

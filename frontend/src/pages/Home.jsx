@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 function Home() {
     return (<>
         <div className={content.content_header}>Welcome</div>
+        <div style={{ height: '200px' }}></div> {/* Extra space to show more background */}
         <div className={content.content_main}>
             <div className={`${content.content_section}`}>
                 <div className={styles.about_section}>
