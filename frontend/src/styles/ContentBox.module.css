@@ -13,14 +13,14 @@
 .content_box_wrapper {
     width: 100%;
     flex-shrink: 0;
-    min-height: 80px;
+    min-height: 68px;
     padding: 1%;
     box-sizing: border-box;
     transition: transform 0.2s ease;
 }
 
 .content_box_wrapper.content_box_short {
-    min-height: 100px;
+    min-height: 85px;
 }
 
 .content_box_wrapper.content_box_collapsed {
@@ -109,13 +109,13 @@
     .content_box_image_container {
         width: 100%;
         min-width: auto;
-        height: 80px;
+        height: 68px;
     }
     
     .content_box_image_container.content_box_short {
         width: 100%;
         min-width: auto;
-        height: 80px;
+        height: 68px;
     }
     
     .content_box_content {
