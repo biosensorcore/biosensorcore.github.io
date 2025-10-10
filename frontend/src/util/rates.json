@@ -27,8 +27,8 @@
             "id": "prototype_construction"
         },
         {
-            "type": "Biosensor Characterization (in vitro)",
-            "description": "We can perform in vitro characterization of existing or new (e.g., prototype) biosensor performance, quantitatively measuring properties such as apparent ligand affinity and specificity, brightness, photostability, pH dependence, and subcellular localization.",
+            "type": "Biosensor Characterization (<i>in vitro</i>)",
+            "description": "We can perform <i>in vitro</i> characterization of existing or new (e.g., prototype) biosensor performance, quantitatively measuring properties such as apparent ligand affinity and specificity, brightness, photostability, pH dependence, and subcellular localization.",
             "personnel_consultation": "2-3",
             "personnel_design": "4-8",
             "wet_lab": "6-15",
@@ -36,8 +36,8 @@
             "id": "vitro"
         },
         {
-            "type": "Biosensor Characterization (in cellulo)",
-            "description": "We can perform in cellulo characterization of existing or new (e.g., prototype) biosensor performance, quantitatively measuring properties such as apparent ligand affinity and specificity, brightness, photostability, pH dependence, and subcellular localization.",
+            "type": "Biosensor Characterization (<i>in cellulo</i>)",
+            "description": "We can perform <i>in cellulo</i> characterization of existing or new (e.g., prototype) biosensor performance, quantitatively measuring properties such as apparent ligand affinity and specificity, brightness, photostability, pH dependence, and subcellular localization.",
             "personnel_consultation": "2-3",
             "personnel_design": "2-4",
             "wet_lab": "12-24",
