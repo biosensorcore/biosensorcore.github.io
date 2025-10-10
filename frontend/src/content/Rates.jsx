@@ -21,8 +21,8 @@ function Rates() {
                     <tbody>
                         {RateJSON.rates.map((rate) => (
                             <tr key={rate.id} id={rate.id}>
-                                <td>{rate.type}</td>
-                                <td>{rate.description}</td>
+                                <td dangerouslySetInnerHTML={{__html: rate.type}}></td>
+                                <td dangerouslySetInnerHTML={{__html: rate.description}}></td>
                             </tr>
                         ))}
                     </tbody>
