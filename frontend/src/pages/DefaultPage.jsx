@@ -2,55 +2,54 @@ import Header from "../components/Header";
 import HeaderNavbar from "../components/HeaderNavbar";
 import Footer from "../components/Footer";
 import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function DefaultPage({page}) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
 
-    // Calculate header height: 20vh (header) + navbar height (~60px)
-    const headerHeight = 'calc(20vh + 60px)';
+    useEffect(() => {
+        // Apply background directly to body element
+        const body = document.body;
+        const headerHeight = 'calc(20vh + 60px)';
+        
+        body.style.backgroundImage = 'url(/images/banner.jpg)';
+        body.style.backgroundRepeat = 'no-repeat';
+        body.style.backgroundSize = 'cover';
+        body.style.backgroundPosition = 'center';
+        body.style.backgroundAttachment = 'fixed';
+        body.style.backgroundOrigin = 'border-box';
+        body.style.backgroundClip = 'border-box';
+        
+        // Create overlay element
+        let overlay = document.getElementById('background-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'background-overlay';
+            overlay.style.position = 'fixed';
+            overlay.style.top = headerHeight;
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = `calc(100vh - ${headerHeight})`;
+            overlay.style.backgroundColor = isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)';
+            overlay.style.zIndex = '-1';
+            overlay.style.pointerEvents = 'none';
+            document.body.appendChild(overlay);
+        } else {
+            overlay.style.backgroundColor = isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)';
+        }
 
-    const backgroundStyle = {
-        backgroundImage: 'url(/images/banner.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        minHeight: '100vh',
-        position: 'fixed',
-        top: headerHeight,
-        left: 0,
-        width: '100%',
-        height: `calc(100vh - ${headerHeight})`,
-        zIndex: -2
-    };
-
-    const overlayStyle = {
-        position: 'fixed',
-        top: headerHeight,
-        left: 0,
-        width: '100%',
-        height: `calc(100vh - ${headerHeight})`,
-        backgroundColor: isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)',
-        zIndex: -1,
-        pointerEvents: 'none'
-    };
-
-    const contentStyle = {
-        position: 'relative',
-        zIndex: 1,
-        backgroundColor: 'transparent'
-    };
+        // Cleanup function
+        return () => {
+            // Don't remove background on unmount to avoid flicker
+        };
+    }, [isHomePage]);
 
     return <>
-        <div style={backgroundStyle}></div>
-        <div style={overlayStyle}></div>
-        <div style={contentStyle}>
-            <Header />
-            <HeaderNavbar />
-            <Outlet />
-            <Footer />
-        </div>
+        <Header />
+        <HeaderNavbar />
+        <Outlet />
+        <Footer />
     </>
     
 }
