@@ -7,6 +7,9 @@ function DefaultPage({page}) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
 
+    // Calculate header height: 20vh (header) + navbar height (~60px)
+    const headerHeight = 'calc(20vh + 60px)';
+
     const backgroundStyle = {
         backgroundImage: 'url(/images/banner.jpg)',
         backgroundRepeat: 'no-repeat',
@@ -15,19 +18,19 @@ function DefaultPage({page}) {
         backgroundAttachment: 'fixed',
         minHeight: '100vh',
         position: 'fixed',
-        top: 0,
+        top: headerHeight,
         left: 0,
         width: '100%',
-        height: '100%',
+        height: `calc(100vh - ${headerHeight})`,
         zIndex: -2
     };
 
     const overlayStyle = {
         position: 'fixed',
-        top: 0,
+        top: headerHeight,
         left: 0,
         width: '100%',
-        height: '100%',
+        height: `calc(100vh - ${headerHeight})`,
         backgroundColor: isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)',
         zIndex: -1,
         pointerEvents: 'none'
