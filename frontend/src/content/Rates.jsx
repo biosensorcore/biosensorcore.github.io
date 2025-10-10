@@ -160,7 +160,7 @@ function Rates() {
             
             <div className={content.content_default}>
                 <h3>Service Categories</h3>
-                <table className={styles.table}>
+                <table className={`${styles.table} ${styles.service_categories_table}`}>
                     <thead>
                         <tr>
                             <th>Service Type</th>
