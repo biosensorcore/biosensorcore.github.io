@@ -35,8 +35,8 @@
 }
 
 .video_gallery {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     padding: 0% 5%;
     gap: 30px;
 }
@@ -202,6 +202,19 @@
     padding-bottom: 5%;
 }
 
+/* Desktop breakpoints for responsive grid */
+@media (min-width: 1200px) {
+    .video_gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1199px) {
+    .video_gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 800px) {
     .content_header {
         font-size: 20px;
@@ -232,6 +245,7 @@
         height: 60%;
     }
     .video_gallery {
+        grid-template-columns: 1fr;
         gap: 20px;
         padding: 5%;
     }
