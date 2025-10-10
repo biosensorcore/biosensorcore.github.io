@@ -46,15 +46,15 @@
 
 .content_box_image_container {
     height: 100%;
-    width: 120px;
-    min-width: 120px;
+    width: 240px;
+    min-width: 240px;
     overflow: hidden;
 }
 
 .content_box_image_container.content_box_short {
     height: 100%;
-    width: 100px;
-    min-width: 100px;
+    width: 200px;
+    min-width: 200px;
 }
 
 .content_box_image_container img {
