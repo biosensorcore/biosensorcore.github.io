@@ -108,12 +108,11 @@
 .service_categories_table th:nth-child(2),
 .service_categories_table td:nth-child(2) {
     width: 70%;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: normal;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    overflow: hidden;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
     max-width: 70%;
 }
 
