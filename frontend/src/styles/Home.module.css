@@ -1,14 +1,3 @@
-/* .banner_image {
-    min-height: 500px;
-    width: 100%;
-    background: url("../../public/images/banner.png") 
-    opacity: 1;
-    transition: opacity 2s ease-in-out;
-}
-
-.banner_image.fade_in {
-    opacity: 1;
-} */
 
 .banner_text_container {
     width: 100%;
