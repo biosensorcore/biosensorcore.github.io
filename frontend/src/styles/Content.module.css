@@ -8,7 +8,7 @@
 
 .content_main {
     min-height: 80vh;
-    padding: 5% 0%;
+    padding: 2% 0%;
 }
 
 .content_section {
@@ -22,7 +22,7 @@
 }
 
 .content_default:first-of-type {
-    padding-top: 1%;
+    padding-top: 0.5%;
 }
 
 .content_default:not(:first-of-type) {
