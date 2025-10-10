@@ -37,13 +37,19 @@ function Gallery() {
             </p>
             <div className={content.video_gallery}>
             {videos.map((video) => (
-                <div key={video.id.videoId} className={content.video}>
-                <iframe
-                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                    title={video.snippet.title}
-                    allowFullScreen
-                    className={content.iframe}
-                />
+                <div key={video.id.videoId} className={content.video_box}>
+                    <div className={content.video_container}>
+                        <iframe
+                            src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                            title={video.snippet.title}
+                            allowFullScreen
+                            className={content.iframe}
+                        />
+                    </div>
+                    <div className={content.video_text}>
+                        <h3 className={content.video_title}>{video.snippet.title}</h3>
+                        <p className={content.video_description}>{video.snippet.description}</p>
+                    </div>
                 </div>
             ))}
             </div>
