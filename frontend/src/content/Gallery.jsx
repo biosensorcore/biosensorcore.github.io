@@ -29,6 +29,12 @@ function Gallery() {
     return <>
         <div className={content.content_header}>Video Gallery</div>
         <div className={content.content_main}>
+            <p style={{textAlign: 'center', marginBottom: '20px', fontSize: '18px'}}>
+                Videos from the UCSD Biosensor Core YouTube channel - 
+                <a href="https://www.youtube.com/@UCSDBiosensorCore" target="_blank" rel="noopener noreferrer" style={{color: '#007bff', textDecoration: 'none', marginLeft: '5px'}}>
+                    @UCSDBiosensorCore
+                </a>
+            </p>
             <div className={content.video_gallery}>
             {videos.map((video) => (
                 <div key={video.id.videoId} className={content.video}>

@@ -41,6 +41,8 @@
     flex-wrap: wrap;
     padding: 0% 5%;
     row-gap: 50px;
+    column-gap: 20px;
+    justify-content: center;
 }
 
 .video {
@@ -87,6 +89,7 @@
     .video_gallery {
         gap: 30px;
         padding: 5%;
+        column-gap: 30px;
     }
     .advisory_board {
         padding: 0% 10%;
