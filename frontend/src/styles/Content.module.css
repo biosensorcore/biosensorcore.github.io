@@ -21,6 +21,14 @@
     padding: 0% 5%;
 }
 
+.content_default:first-of-type {
+    padding-top: 2%;
+}
+
+.content_default:not(:first-of-type) {
+    padding-top: 5%;
+}
+
 .content_link {
     color: --navy-blue;
     text-decoration: underline;
