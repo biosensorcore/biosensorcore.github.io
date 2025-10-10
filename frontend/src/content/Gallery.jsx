@@ -61,7 +61,7 @@ function Gallery() {
                                     rel="noopener noreferrer"
                                     className={content.read_more_link}
                                 >
-                                    Read more on YouTube
+                                    Read more and watch on YouTube
                                 </a>
                             )}
                         </p>
