@@ -1,28 +1,9 @@
 import content from '../styles/Content.module.css';
 import styles from '../styles/Home.module.css';
-import { useState, useEffect } from 'react';
 
 function Home() {
-
-    const [isLoaded, setIsLoaded] = useState(false);
-
-    useEffect(() => {
-        const timer = setTimeout(() => setIsLoaded(true), 1); 
-        return () => clearTimeout(timer);
-    }, []);
-
-
-
     return (<>
         <div className={content.content_header}>Welcome</div>
-        <div>
-            <div className={styles.banner_text_container}>
-                <div className={`${styles.banner_text} ${isLoaded ? styles.fade_in : ""}`}>
-                    <h2>BIOSENSOR CORE</h2>
-                </div>
-            </div>
-            
-        </div>
         <div className={content.content_main}>
             <div className={`${content.content_section}`}>
                 <div className={styles.about_section}>
