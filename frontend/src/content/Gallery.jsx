@@ -66,15 +66,25 @@ function Gallery() {
                             className={content.video_thumbnail}
                             onMouseEnter={() => handleVideoHover(video.id.videoId, true)}
                             onMouseLeave={() => handleVideoHover(video.id.videoId, false)}
-                            onClick={() => handleVideoClick(video)}
                         >
                             {hoveredVideo === video.id.videoId ? (
-                                <iframe
-                                    src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1`}
-                                    title={video.snippet.title}
-                                    allowFullScreen
-                                    className={content.iframe_hover}
-                                />
+                                <div className={content.hover_container}>
+                                    <iframe
+                                        src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1`}
+                                        title={video.snippet.title}
+                                        allowFullScreen
+                                        className={content.iframe_hover}
+                                    />
+                                    <button 
+                                        className={content.expand_button}
+                                        onClick={() => handleVideoClick(video)}
+                                        title="Expand to full screen"
+                                    >
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 14H5V20H11V18H7V14ZM5 10H7V6H11V4H5V10ZM13 20H19V14H17V18H13V20ZM17 6V10H19V4H13V6H17Z" fill="white"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             ) : (
                                 <img
                                     src={video.snippet.thumbnails?.medium?.url || video.snippet.thumbnails?.default?.url}
