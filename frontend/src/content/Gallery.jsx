@@ -73,7 +73,7 @@ function Gallery() {
                             {hoveredVideo === video.id.videoId ? (
                                 <div className={content.hover_container}>
                                     <iframe
-                                        src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1`}
+                                        src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=${video.id.videoId}&iv_load_policy=3&fs=0&disablekb=1`}
                                         title={video.snippet.title}
                                         allowFullScreen
                                         className={content.iframe_hover}
@@ -124,7 +124,7 @@ function Gallery() {
                             ×
                         </button>
                         <iframe
-                            src={`https://www.youtube.com/embed/${expandedVideo.id.videoId}?autoplay=1`}
+                            src={`https://www.youtube.com/embed/${expandedVideo.id.videoId}?autoplay=1&loop=1&playlist=${expandedVideo.id.videoId}`}
                             title={expandedVideo.snippet.title}
                             allowFullScreen
                             className={content.modal_iframe}
