@@ -7,57 +7,79 @@ import { useEffect, useState } from "react";
 function DefaultPage({page}) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
-    const [offsetTop, setOffsetTop] = useState(0);
+    const [headerHeight, setHeaderHeight] = useState('calc(20vh + 60px)');
 
     useEffect(() => {
-        // Calculate the total height of header + navbar + content header
-        const headerHeight = window.innerHeight * 0.2; // 20vh
-        const navbarHeight = 56; // Bootstrap navbar height
-        const contentHeaderHeight = 64; // Approximate height of content header with padding
-        
-        // For Home page, reduce the offset to show more of the background image
-        const backgroundOffset = isHomePage ? -100 : 0; // Negative offset to show more background
-        
-        const totalOffset = headerHeight + navbarHeight + contentHeaderHeight + backgroundOffset;
-        setOffsetTop(totalOffset);
-    }, [isHomePage]);
+        const calculateTotalHeight = () => {
+            const headerElement = document.querySelector('.header_container');
+            const navbarElement = document.querySelector('.navbar');
+            const contentHeaderElement = document.querySelector('.content_header');
+            
+            let totalHeight = 0;
+            
+            if (headerElement) {
+                totalHeight += headerElement.offsetHeight;
+            }
+            if (navbarElement) {
+                totalHeight += navbarElement.offsetHeight;
+            }
+            if (contentHeaderElement) {
+                totalHeight += contentHeaderElement.offsetHeight;
+            }
+            
+            console.log('Total header height:', totalHeight);
+            return `${totalHeight}px`;
+        };
 
-    const pageWrapperStyle = {
+        // Wait for DOM to render, then calculate height
+        const timer = setTimeout(() => {
+            const height = calculateTotalHeight();
+            setHeaderHeight(height);
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, [location.pathname]);
+
+    const backgroundStyle = {
+        position: 'fixed',
+        top: headerHeight,
+        left: 0,
+        width: '100%',
+        height: `calc(100vh - ${headerHeight})`,
         backgroundImage: 'url(/images/banner.jpg)',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: `center ${offsetTop}px`,
+        backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        minHeight: '100vh',
-        position: 'relative'
+        zIndex: -2,
+        pointerEvents: 'none'
     };
 
     const overlayStyle = {
-        position: 'absolute',
-        top: 0,
+        position: 'fixed',
+        top: headerHeight,
         left: 0,
         width: '100%',
-        height: '100%',
+        height: `calc(100vh - ${headerHeight})`,
         backgroundColor: isHomePage ? 'transparent' : 'rgba(255, 255, 255, 0.3)',
-        zIndex: 0,
-        pointerEvents: 'none',
-        display: isHomePage ? 'none' : 'block' // Completely remove overlay on Home page
+        zIndex: -1,
+        pointerEvents: 'none'
     };
 
     const contentStyle = {
         position: 'relative',
-        zIndex: 1
+        zIndex: 1,
+        backgroundColor: 'transparent'
     };
 
     return <>
-        <div style={pageWrapperStyle}>
-            <div style={overlayStyle}></div>
-            <div style={contentStyle}>
-                <Header />
-                <HeaderNavbar />
-                <Outlet />
-                <Footer />
-            </div>
+        <div style={backgroundStyle}></div>
+        <div style={overlayStyle}></div>
+        <div style={contentStyle}>
+            <Header />
+            <HeaderNavbar />
+            <Outlet />
+            <Footer />
         </div>
     </>
     
