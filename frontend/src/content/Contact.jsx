@@ -6,8 +6,7 @@ function Contact() {
         <div className={content.content_main}>
             <div className={content.content_default} style={{marginBottom: "5%"}}>
                 <h3>Reach Out</h3>
-                <p>Reach out via our email <a className={content.content_link} href="mailto:biosensors@health.ucsd.edu
-    ">biosensors@health.ucsd.edu</a>
+                <p>Reach out via our email <a className={content.content_link} href="mailto:biosensors@health.ucsd.edu">biosensors@health.ucsd.edu</a>
                 </p>
             </div>
             <div className={content.content_default}>
