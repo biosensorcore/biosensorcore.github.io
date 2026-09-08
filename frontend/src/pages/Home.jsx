@@ -1,15 +1,21 @@
+import { Link } from "react-router-dom";
 import content from '../styles/Content.module.css';
 import styles from '../styles/Home.module.css';
 
 function Home() {
     return (<>
         <div className={content.content_header}>UC San Diego Biosensor Core</div>
-        <div style={{ height: '400px' }}></div> {/* Extra space to show more background */}
+        <div className={styles.home_hero} aria-hidden="true"></div>
         <div className={content.content_main}>
             <div className={`${content.content_section}`}>
                 <div className={styles.home_intro}>
                     <p>The UC San Diego Biosensor Core provides expertise and resources for the selection, implementation, characterization, and development of genetically encoded biosensors and related optical tools.</p>
                     <p>We work with investigators at UC San Diego and elsewhere to design rigorous biosensor experiments, establish quantitative imaging and analysis workflows, evaluate existing sensors, and develop new approaches when suitable tools are not available.</p>
+                    <nav className={styles.home_actions} aria-label="Primary site actions">
+                        <Link className={styles.home_action} to="/contact">Discuss a project</Link>
+                        <Link className={styles.home_action} to="/rates">Rates & Services</Link>
+                        <Link className={styles.home_action} to="/collections">Biosensor Collection</Link>
+                    </nav>
                 </div>
             </div>
             <div className={styles.mission_section}>

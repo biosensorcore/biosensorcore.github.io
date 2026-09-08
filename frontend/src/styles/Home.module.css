@@ -55,6 +55,43 @@
     padding: 2% 0 5% 0;
 }
 
+.home_hero {
+    height: clamp(160px, 32vw, 400px);
+}
+
+.home_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    margin-top: 0.25em;
+}
+
+.home_action {
+    display: inline-block;
+    color: var(--navy-blue);
+    background-color: white;
+    border: 1px solid var(--navy-blue);
+    padding: 0.45em 0.95em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.home_action:hover,
+.home_action:focus-visible {
+    background-color: var(--navy-blue);
+    color: white;
+    outline: 2px solid var(--light-blue);
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .home_action {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
 .mission_section {
     background-color: var(--navy-blue);
     color: white;

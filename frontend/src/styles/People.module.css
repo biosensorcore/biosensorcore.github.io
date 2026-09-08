@@ -1,0 +1,121 @@
+.people_main {
+    padding-bottom: 2%;
+}
+
+.section {
+    padding: 1.5% 5% 2%;
+}
+
+.section_heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin: 0 0 1rem;
+    border-bottom: 3px solid var(--light-blue);
+    padding-bottom: 0.35rem;
+}
+
+.staff_group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5%;
+}
+
+.staff_card {
+    flex-basis: 25%;
+    width: 25%;
+    padding: 0.75%;
+    box-sizing: border-box;
+}
+
+.staff_card figure {
+    margin: 0;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.staff_photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.staff_caption {
+    padding: 0.85rem 1rem 1.1rem;
+}
+
+.staff_name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin: 0 0 0.4rem;
+    border-bottom: 3px solid var(--light-blue);
+    padding-bottom: 0.3rem;
+}
+
+.staff_role {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.advisory_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 0.85rem 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.advisory_item {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-left: 3px solid var(--light-blue);
+    padding: 0.75rem 0.95rem;
+}
+
+.advisory_name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin: 0 0 0.2rem;
+}
+
+.advisory_institution {
+    margin: 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--navy-blue);
+}
+
+.advisory_expertise {
+    margin: 0.4rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 1000px) {
+    .staff_card {
+        flex-basis: 50%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 2% 4% 3%;
+    }
+
+    .staff_card {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .section_heading {
+        font-size: 1.3rem;
+    }
+}

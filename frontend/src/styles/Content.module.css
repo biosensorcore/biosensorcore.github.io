@@ -39,8 +39,30 @@
 }
 
 .content_link {
-    color: --navy-blue;
+    color: var(--navy-blue);
     text-decoration: underline;
+}
+
+.content_link:hover,
+.content_link:focus-visible {
+    color: var(--light-blue);
+}
+
+.section_heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navy-blue);
+    margin: 0 0 0.75rem;
+}
+
+.plain_list {
+    margin: 0 0 1em 1.25em;
+    padding: 0;
+}
+
+.plain_list li {
+    margin-bottom: 0.45em;
+    line-height: 1.45;
 }
 
 .video_gallery {
