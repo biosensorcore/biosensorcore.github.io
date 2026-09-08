@@ -112,6 +112,11 @@
     text-decoration: underline;
 }
 
+.mission_section a:focus-visible {
+    outline: 2px solid var(--light-blue);
+    outline-offset: 3px;
+}
+
 .rate_description {
     display: block;
     margin-top: 0.45em;
@@ -121,13 +126,21 @@
     line-height: 1.35;
 }
 
+.table_scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px 0;
+}
+
 .table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid var(--dark-lighter);
-    font-size: 1.2vmax;
+    font-size: 1rem;
 }
 
 .table th,
@@ -146,7 +159,7 @@
 }
 
 .service_categories_table {
-    table-layout: fixed;
+    table-layout: auto;
     width: 100%;
 }
 
@@ -176,13 +189,14 @@
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 0.9em;
-    color: #666;
+    color: #4a4a4a;
 }
 
 .page_note {
     font-size: 0.95rem;
-    color: #555;
+    color: #333;
     margin: 0 0 0.4em;
+    overflow-wrap: anywhere;
 }
 
 .table_footnote:last-of-type {
@@ -201,6 +215,12 @@
 .table td:nth-child(2) {
     min-width: 120px;
     white-space: nowrap;
+}
+
+.service_categories_table th:nth-child(2),
+.service_categories_table td:nth-child(2) {
+    white-space: normal;
+    min-width: 0;
 }
 
 .table tbody tr:nth-child(odd) {
@@ -226,150 +246,32 @@
     .banner_text h2 {
         font-size: 3rem;
     }
-    
-    .table {
-        font-size: 0.75rem;
-        table-layout: fixed;
-        width: 100%;
+
+    .table:not(.service_categories_table) {
+        min-width: 40rem;
+        table-layout: auto;
     }
-    
+
     .table th,
     .table td {
-        padding: 3px 4px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+        padding: 0.55rem 0.65rem;
         white-space: normal;
-        hyphens: none;
     }
-    
-    /* Specific column widths for different tables */
-    .table th:nth-child(1),
-    .table td:nth-child(1) {
-        width: 25%;
+
+    .service_categories_table {
+        table-layout: auto;
+        min-width: 0;
     }
-    
-    .table th:nth-child(2),
-    .table td:nth-child(2) {
-        width: 25%;
-    }
-    
-    .table th:nth-child(3),
-    .table td:nth-child(3) {
-        width: 25%;
-    }
-    
-    .table th:nth-child(4),
-    .table td:nth-child(4) {
-        width: 25%;
-    }
-    
-    /* Service Categories table specific */
+
     .service_categories_table th:nth-child(1),
-    .service_categories_table td:nth-child(1) {
-        width: 30%;
-    }
-    
+    .service_categories_table td:nth-child(1),
     .service_categories_table th:nth-child(2),
     .service_categories_table td:nth-child(2) {
-        width: 70%;
+        width: auto;
+        max-width: none;
     }
-    
-    /* Supply Costs table specific */
-    .supply_costs_table th:nth-child(1),
+
     .supply_costs_table td:nth-child(1) {
-        width: 35%;
         white-space: normal;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-    
-    .supply_costs_table th:nth-child(2),
-    .supply_costs_table td:nth-child(2) {
-        width: 15%;
-    }
-    
-    .supply_costs_table th:nth-child(3),
-    .supply_costs_table td:nth-child(3) {
-        width: 15%;
-    }
-    
-    .supply_costs_table th:nth-child(4),
-    .supply_costs_table td:nth-child(4) {
-        width: 35%;
-    }
-}
-
-@media (max-width: 600px) {
-    .table {
-        font-size: 0.7rem;
-    }
-    
-    .table th,
-    .table td {
-        padding: 2px 3px;
-    }
-    
-    /* Supply Costs table adjustments for smaller screens */
-    .supply_costs_table th:nth-child(1),
-    .supply_costs_table td:nth-child(1) {
-        width: 40%;
-    }
-    
-    .supply_costs_table th:nth-child(2),
-    .supply_costs_table td:nth-child(2) {
-        width: 12%;
-    }
-    
-    .supply_costs_table th:nth-child(3),
-    .supply_costs_table td:nth-child(3) {
-        width: 12%;
-    }
-    
-    .supply_costs_table th:nth-child(4),
-    .supply_costs_table td:nth-child(4) {
-        width: 36%;
-    }
-}
-
-@media (max-width: 480px) {
-    .table {
-        font-size: 0.65rem;
-    }
-    
-    .table th,
-    .table td {
-        padding: 2px 2px;
-    }
-    
-    /* Adjust column widths for very small screens */
-    .service_categories_table th:nth-child(1),
-    .service_categories_table td:nth-child(1) {
-        width: 25%;
-    }
-    
-    .service_categories_table th:nth-child(2),
-    .service_categories_table td:nth-child(2) {
-        width: 75%;
-    }
-    
-    /* Supply Costs table adjustments for very small screens */
-    .supply_costs_table th:nth-child(1),
-    .supply_costs_table td:nth-child(1) {
-        width: 45%;
-    }
-    
-    .supply_costs_table th:nth-child(2),
-    .supply_costs_table td:nth-child(2) {
-        width: 10%;
-    }
-    
-    .supply_costs_table th:nth-child(3),
-    .supply_costs_table td:nth-child(3) {
-        width: 10%;
-    }
-    
-    .supply_costs_table th:nth-child(4),
-    .supply_costs_table td:nth-child(4) {
-        width: 35%;
     }
 }

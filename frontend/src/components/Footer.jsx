@@ -3,11 +3,11 @@ import styles from '../styles/Footer.module.css'
 
 function Footer() {
     return (
-        <div className={styles.footer_container}>
+        <footer className={styles.footer_container}>
             <div className={styles.footer_infobar}>
                 <div className={styles.infobar_logo_container}>
                 <a href="https://ucsd.edu">
-                    <img className={styles.infobar_logo} src="images/ucsd-logo-white.png" alt="UC San Diego Logo"/>
+                    <img className={styles.infobar_logo} src="images/ucsd-logo-white.png" alt="UC San Diego"/>
                 </a>
                 </div>
                 <div className={styles.infobar_text}>
@@ -53,9 +53,8 @@ function Footer() {
                 </div>
                 <div className={styles.footer_logo_container}></div>
             </div>
-        </div>
-
-    )
+        </footer>
+    );
 }
 
 export default Footer;

@@ -31,7 +31,7 @@ const CATEGORIES = [
 
 function Collections() {
     return <>
-        <div className={content.content_header}>Biosensor collection</div>
+        <h1 className={content.content_header}>Biosensor collection</h1>
         <div className={content.content_main}>
             <div className={content.content_default}>
                 <p>We maintain a growing collection of characterized biosensor constructs and associated experimental resources. A searchable public catalog is in development. In the meantime, <Link className={content.content_link} to="/contact">contact the Biosensor Core</Link> if you are looking for a sensor for a particular measurement or application.</p>
@@ -45,7 +45,7 @@ function Collections() {
                         </li>
                     ))}
                 </ul>
-                <p>Availability, characterization status, and suitability for a particular experiment vary among constructs. Contact us to discuss the measurement you need rather than assuming that a listed category implies a specific sensor is ready for every application.</p>
+                <p>Availability, characterization status, and suitability for a particular experiment vary among constructs. Contact us to discuss the measurement you need.</p>
             </div>
         </div>
     </>;

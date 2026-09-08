@@ -4,7 +4,7 @@ function About() {
 
     return (
         <>
-            <div className={styles.content_header}>About</div>
+            <h1 className={styles.content_header}>About</h1>
             <div className={styles.content_main}>
                 <div className={styles.content_default}>
                     <p>The UC San Diego Biosensor Core supports the rigorous use and development of genetically encoded biosensors, including fluorescent and bioluminescent indicators and related optical tools. The Core is an integral component of the Biological Imaging Core of the UC San Diego/UCLA NIDDK Diabetes Research Center (P30 DK063491).</p>

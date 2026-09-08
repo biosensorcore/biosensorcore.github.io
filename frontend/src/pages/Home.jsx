@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 
 function Home() {
     return (<>
-        <div className={content.content_header}>UC San Diego Biosensor Core</div>
+        <h1 className={content.content_header}>UC San Diego Biosensor Core</h1>
         <div className={styles.home_hero} aria-hidden="true"></div>
         <div className={content.content_main}>
             <div className={`${content.content_section}`}>

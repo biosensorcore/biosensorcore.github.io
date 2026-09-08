@@ -10,9 +10,9 @@ function HeaderNavbar() {
     
 
     return (
-        <Navbar bg="primary" expand="lg" data-bs-theme="dark" sticky="top">
+        <Navbar bg="primary" expand="lg" data-bs-theme="dark" sticky="top" aria-label="Primary">
         <Container>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label="Toggle navigation" />
             <Navbar.Collapse id="basic-navbar-nav" placement="middle">
                 <Nav className="d-flex justify-content-evenly">
                     {Pages.pages.map((item) => {

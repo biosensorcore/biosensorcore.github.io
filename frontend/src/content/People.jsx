@@ -9,7 +9,7 @@ function displayName(person) {
 function People() {
     return (
         <>
-            <div className={content.content_header}>People</div>
+            <h1 className={content.content_header}>People</h1>
             <div className={`${content.content_main} ${styles.people_main}`}>
                 <section className={styles.section} aria-labelledby="core-staff-heading">
                     <h2 id="core-staff-heading" className={styles.section_heading}>Core Leadership and Staff</h2>
@@ -23,7 +23,7 @@ function People() {
                                             <img
                                                 className={styles.staff_photo}
                                                 src={`images/${person.photo}`}
-                                                alt={`Portrait of ${person.name}`}
+                                                alt={person.name}
                                             />
                                         ) : null}
                                         <figcaption className={styles.staff_caption}>

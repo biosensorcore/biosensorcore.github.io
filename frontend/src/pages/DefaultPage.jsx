@@ -52,12 +52,17 @@ function DefaultPage({page}) {
 
     return <>
         <PageMeta />
+        <a className="skip_link" href="#main-content">Skip to main content</a>
         <div style={pageWrapperStyle}>
             <div style={overlayStyle}></div>
             <div style={contentStyle}>
-                <Header />
-                <HeaderNavbar />
-                <Outlet />
+                <header>
+                    <Header />
+                    <HeaderNavbar />
+                </header>
+                <main id="main-content" tabIndex={-1}>
+                    <Outlet />
+                </main>
                 <Footer />
             </div>
         </div>

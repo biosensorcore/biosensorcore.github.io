@@ -2,7 +2,7 @@ import content from "../styles/Content.module.css"
 
 function Contact() {
     return <>
-        <div className={content.content_header}>Contact Us</div>
+        <h1 className={content.content_header}>Contact Us</h1>
         <div className={content.content_main}>
             <div className={content.content_default}>
                 <h2 className={content.section_heading}>Discuss a project</h2>
@@ -23,7 +23,7 @@ function Contact() {
             <div className={content.content_default}>
                 <h2 className={content.section_heading}>Find Us</h2>
                 <p>Visit us at:</p>
-                <a className={content.content_link} href="https://www.google.com/maps/place/Medical+Teaching+Facility/@32.8756041,-117.2380811,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc06c59fa451ab:0x497a8a5658288d29!8m2!3d32.8756041!4d-117.2355062!16s%2Fg%2F12hrygy14!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
+                <a className={content.content_link} href="https://www.google.com/maps/place/Medical+Teaching+Facility/@32.8756041,-117.2380811,17z/data=!3m1!4b1!4m6!3m5!1s0x80dc06c59fa451ab:0x497a8a5658288d29!8m2!3d32.8756041!4d-117.2355062!16s%2Fg%2F12hrygy14!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                     Medical Teaching Facility, Room 421<br />
                     9515 Gilman Drive<br />
                     La Jolla, CA 92093

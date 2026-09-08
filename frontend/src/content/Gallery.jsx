@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import content from "../styles/Content.module.css"
 import axios from "axios";
@@ -18,14 +18,16 @@ function Gallery() {
     const [videos, setVideos] = useState([]);
     const [expandedVideo, setExpandedVideo] = useState(null);
     const [hoveredVideo, setHoveredVideo] = useState(null);
+    const closeButtonRef = useRef(null);
 
     const loadVideos = async () => {
-        // Add cache-busting parameter to force fresh data
         const timestamp = Date.now();
-        const resp = await axios.get(`${APP_URL}/latest_videos?t=${timestamp}`);
-        console.log('Fetched videos:', resp.data.videos.length);
-        console.log('First video description length:', resp.data.videos[0]?.snippet?.description?.length || 'N/A');
-        setVideos(resp.data.videos);
+        try {
+            const resp = await axios.get(`${APP_URL}/latest_videos?t=${timestamp}`);
+            setVideos(resp.data.videos || []);
+        } catch {
+            setVideos([]);
+        }
     }
 
     const handleVideoHover = (videoId, isHovering) => {
@@ -48,8 +50,22 @@ function Gallery() {
         loadVideos();
     }, []);
 
+    useEffect(() => {
+        if (!expandedVideo) {
+            return undefined;
+        }
+        closeButtonRef.current?.focus();
+        const onKey = (event) => {
+            if (event.key === "Escape") {
+                setExpandedVideo(null);
+            }
+        };
+        document.addEventListener("keydown", onKey);
+        return () => document.removeEventListener("keydown", onKey);
+    }, [expandedVideo]);
+
     return <>
-        <div className={content.content_header}>Video Gallery</div>
+        <h1 className={content.content_header}>Video Gallery</h1>
         <div className={content.content_main}>
             <p style={{textAlign: 'center', marginBottom: '20px', fontSize: '18px'}}>
                 Videos from the UCSD Biosensor Core YouTube channel - 
@@ -61,7 +77,7 @@ function Gallery() {
             {videos.map((video) => (
                 <div key={video.id.videoId} className={content.video_box}>
                     <div className={content.video_text}>
-                        <h3 className={content.video_title}>{video.snippet.title}</h3>
+                        <h2 className={content.video_title}>{video.snippet.title}</h2>
                     </div>
                     <div className={content.video_container}>
                         <div 
@@ -70,25 +86,14 @@ function Gallery() {
                             onMouseLeave={() => handleVideoHover(video.id.videoId, false)}
                         >
                             {hoveredVideo === video.id.videoId ? (
-                                <div className={content.hover_container}>
-                                    <iframe
-                                        src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=${video.id.videoId}&iv_load_policy=3&fs=0&disablekb=1&cc_load_policy=0&playsinline=1&widget_referrer=&origin=${window.location.origin}`}
-                                        title={video.snippet.title}
-                                        allowFullScreen
-                                        className={content.iframe_hover}
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    />
-                                    <button 
-                                        className={content.expand_button}
-                                        onClick={() => handleVideoClick(video)}
-                                        title="Expand to full screen"
-                                    >
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7 14H5V20H11V18H7V14ZM5 10H7V6H11V4H5V10ZM13 20H19V14H17V18H13V20ZM17 6V10H19V4H13V6H17Z" fill="white"/>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=${video.id.videoId}&iv_load_policy=3&fs=0&disablekb=1&cc_load_policy=0&playsinline=1&widget_referrer=&origin=${window.location.origin}`}
+                                    title={video.snippet.title}
+                                    allowFullScreen
+                                    className={content.iframe_hover}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                />
                             ) : (
                                 <img
                                     src={video.snippet.thumbnails?.medium?.url || video.snippet.thumbnails?.default?.url}
@@ -96,6 +101,16 @@ function Gallery() {
                                     className={content.thumbnail_image}
                                 />
                             )}
+                            <button 
+                                type="button"
+                                className={content.expand_button}
+                                onClick={() => handleVideoClick(video)}
+                                aria-label={`Expand video: ${video.snippet.title}`}
+                            >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M7 14H5V20H11V18H7V14ZM5 10H7V6H11V4H5V10ZM13 20H19V14H17V18H13V20ZM17 6V10H19V4H13V6H17Z" fill="white"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div className={content.video_text}>
@@ -117,11 +132,16 @@ function Gallery() {
             ))}
             </div>
 
-            {/* Expanded Video Modal */}
             {expandedVideo && (
                 <div className={content.video_modal} onClick={handleCloseExpanded}>
-                    <div className={content.video_modal_content} onClick={(e) => e.stopPropagation()}>
-                        <button className={content.close_button} onClick={handleCloseExpanded}>
+                    <div className={content.video_modal_content} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={expandedVideo.snippet.title}>
+                        <button
+                            type="button"
+                            className={content.close_button}
+                            onClick={handleCloseExpanded}
+                            ref={closeButtonRef}
+                            aria-label="Close video"
+                        >
                             ×
                         </button>
                         <iframe

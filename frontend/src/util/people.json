@@ -27,11 +27,6 @@
     ],
     "advisory_board": [
         {
-            "name": "Alexandra C. Newton, Ph.D.",
-            "institution": "University of California, San Diego",
-            "expertise": "Molecular mechanisms of signal transduction, focusing on protein kinases and phosphatases, particularly protein kinase C (PKC), and their roles in cell signaling and disease."
-        },
-        {
             "name": "Jin Zhang, Ph.D.",
             "institution": "University of California, San Diego",
             "expertise": "Spatiotemporal regulation of cell signaling pathways using genetically encoded fluorescent biosensors and advanced imaging."

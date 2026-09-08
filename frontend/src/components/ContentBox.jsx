@@ -21,7 +21,7 @@ function ContentBox({content, variant}) {
                 </div> : null}
                 <div className={contentClass}>
                     <div className={headerClass}>
-                        <h5>{header}</h5>
+                        <h2>{header}</h2>
                     </div>
                     <div className={textClass}>
                         <p>{text}</p>
@@ -36,10 +36,14 @@ function ContentBox({content, variant}) {
         `${styles.content_box_wrapper} ${short ? styles.content_box_short : ""}`;
 
     return <div className={wrapperClass}>
-        {url ? 
-        <a href={url} target={`${url.includes("http") ? "_blank" : "" }`}>
-            <Box/>
-        </a> : <Box/>}
+        {url ? (
+            <a
+                href={url}
+                {...(url.includes("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+                <Box/>
+            </a>
+        ) : <Box/>}
     </div>
     
 }

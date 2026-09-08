@@ -7,14 +7,15 @@ import RateJSON from "../util/rates.json";
 function Rates() {
 
     return <>
-        <div className={content.content_header}>Rates & Services</div>
+        <h1 className={content.content_header}>Rates & Services</h1>
         <div className={content.content_main}>
             <div className={content.content_default}>
                 <p className={styles.page_note}>Rates updated September 2026</p>
                 <p className={styles.page_note}>Non-UCSD Academic rates include a 45% institutional overhead charge applied to the corresponding UC San Diego rate.</p>
             </div>
             <div className={content.content_default}>
-                <h3>Service Categories</h3>
+                <h2>Examples of Service Types</h2>
+                <div className={styles.table_scroll}>
                 <table className={`${styles.table} ${styles.service_categories_table}`}>
                     <thead>
                         <tr>
@@ -31,10 +32,12 @@ function Rates() {
                         ))}
                     </tbody>
                 </table>
+                </div>
             </div>
             
             <div className={content.content_default}>
-                <h3>Hourly Rates</h3>
+                <h2>Hourly Rates</h2>
+                <div className={styles.table_scroll}>
                 <table className={styles.table}>
                     <thead>
                         <tr>
@@ -83,17 +86,19 @@ function Rates() {
                         </tr>
                         <tr>
                             <td>Imaging (Nikon Imaging Center)</td>
-                            <td colSpan="3"><a href="https://nic.ucsd.edu/rates/index.html" target="_blank" rel="noopener noreferrer">https://nic.ucsd.edu/rates/index.html</a></td>
+                            <td colSpan="3"><a href="https://nic.ucsd.edu/rates/index.html" target="_blank" rel="noopener noreferrer">Nikon Imaging Center rates</a></td>
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 <p className={styles.table_footnote}>* Rates are provisional and subject to change.</p>
                 <p className={styles.table_footnote}>** An initial 30-minute meeting is complimentary for all academic users.</p>
             </div>
             
             <div className={content.content_default}>
-                <h3>Typical Project Planning Ranges</h3>
+                <h2>Typical Project Planning Ranges</h2>
                 <p>The ranges below are intended for project planning and are not fixed-price quotes. Actual cost depends on experimental readiness, construct and assay complexity, the number of variants, conditions, and controls, the amount of troubleshooting required, and whether new methods or sensor engineering are needed. Established workflows can usually be estimated relatively closely, whereas novel biosensor development and optimization are inherently less predictable. We will discuss substantial changes in scope or expected cost before proceeding.</p>
+                <div className={styles.table_scroll}>
                 <table className={styles.table}>
                     <thead>
                         <tr>
@@ -160,11 +165,13 @@ function Rates() {
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 <p className={styles.table_footnote}>* Rates are provisional and subject to change.</p>
             </div>
             
             <div className={content.content_default}>
-                <h3>Common Supply Costs</h3>
+                <h2>Common Supply Costs</h2>
+                <div className={styles.table_scroll}>
                 <table className={`${styles.table} ${styles.supply_costs_table}`}>
                     <thead>
                         <tr>
@@ -207,6 +214,7 @@ function Rates() {
                         </tr>
                     </tbody>
                 </table>
+                </div>
                 <p className={styles.table_footnote}>* Supply costs for commercial users will be included in contract negotiations.</p>
                 <p className={styles.table_footnote}>** Additional charges may apply for large-scale plasmid preparation, purification, unusually complex constructs, or other requested preparation.</p>
             </div>
