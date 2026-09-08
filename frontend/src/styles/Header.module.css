@@ -13,6 +13,17 @@
     width: 50%;
 }
 
+.home_link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.home_link:hover,
+.home_link:focus-visible {
+    color: inherit;
+    text-decoration: none;
+}
+
 .logo_container {
     width: 50%;
     height: 50%;

@@ -179,6 +179,12 @@
     color: #666;
 }
 
+.page_note {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0 0 0.4em;
+}
+
 .table_footnote:last-of-type {
     margin-bottom: 30px;
 }

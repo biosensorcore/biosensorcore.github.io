@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import HeaderNavbar from "../components/HeaderNavbar";
 import Footer from "../components/Footer";
+import PageMeta from "../components/PageMeta";
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -50,6 +51,7 @@ function DefaultPage({page}) {
     };
 
     return <>
+        <PageMeta />
         <div style={pageWrapperStyle}>
             <div style={overlayStyle}></div>
             <div style={contentStyle}>

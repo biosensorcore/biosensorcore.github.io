@@ -10,6 +10,10 @@ function Rates() {
         <div className={content.content_header}>Rates & Services</div>
         <div className={content.content_main}>
             <div className={content.content_default}>
+                <p className={styles.page_note}>Rates updated September 2026</p>
+                <p className={styles.page_note}>Non-UCSD Academic rates include a 45% institutional overhead charge applied to the corresponding UC San Diego rate.</p>
+            </div>
+            <div className={content.content_default}>
                 <h3>Service Categories</h3>
                 <table className={`${styles.table} ${styles.service_categories_table}`}>
                     <thead>

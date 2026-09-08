@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from '../styles/Footer.module.css'
 
 function Footer() {
@@ -30,20 +31,20 @@ function Footer() {
                         <tbody>
                             <tr>
                                 <td>
-                                    <a className={styles.footer_link} href="/about">About</a>
+                                    <Link className={styles.footer_link} to="/about">About</Link>
                                 </td>
                                 <td>
-                                    <a className={styles.footer_link} href="/contact">Contact</a>
+                                    <Link className={styles.footer_link} to="/contact">Contact</Link>
                                 </td>
                                 
                                 
                             </tr>
                             <tr>
                                 <td>
-                                    <a className={styles.footer_link} href="/collections">Biosensors</a>
+                                    <Link className={styles.footer_link} to="/collections">Biosensor Collection</Link>
                                 </td>
                                 <td>
-                                    <a className={styles.footer_link} href="/rates">Rates & Services</a>
+                                    <Link className={styles.footer_link} to="/rates">Services & Rates</Link>
                                 </td>
 
                             </tr>

@@ -18,6 +18,9 @@
 .nav-link {
     color: var(--light-blue);
     font-weight: 600;
+    white-space: nowrap;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
 }
 
 .nav-link:hover {
@@ -50,7 +53,10 @@
     width: 100%;
 }
 
-.navbar>.container {
-    justify-content: center;
-    z-index: 100;
+@media (max-width: 991px) {
+    .nav-link {
+        white-space: normal;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
 }
