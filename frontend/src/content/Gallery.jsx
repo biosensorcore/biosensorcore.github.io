@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import content from "../styles/Content.module.css"
 import axios from "axios";
@@ -18,7 +18,6 @@ function Gallery() {
     const [videos, setVideos] = useState([]);
     const [expandedVideo, setExpandedVideo] = useState(null);
     const [hoveredVideo, setHoveredVideo] = useState(null);
-    const videoRefs = useRef({});
 
     const loadVideos = async () => {
         // Add cache-busting parameter to force fresh data
