@@ -29,9 +29,10 @@
 }
 
 .brand_title {
-    font-size: 2em;
+    font-size: clamp(1.45rem, 2.4vw + 1.05rem, 2.5em);
     font-weight: 700;
     margin: 0;
+    line-height: 1.1;
 }
 
 .logo_container {
@@ -52,7 +53,7 @@
 }
 
 .header_logo_image {
-    width: 80%;
+    width: 45%;
     max-width: 100%;
     height: auto;
 }
@@ -64,13 +65,8 @@
         gap: 0.35rem;
     }
 
-    .brand_title {
-        font-size: 1.15em;
-        line-height: 1.2;
-    }
-
     .header_logo_image {
-        width: 95%;
-        max-width: 220px;
+        width: 48%;
+        max-width: 130px;
     }
 }

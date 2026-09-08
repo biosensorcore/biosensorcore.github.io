@@ -13,7 +13,7 @@ function Home() {
                     <p>We work with investigators at UC San Diego and elsewhere to design rigorous biosensor experiments, establish quantitative imaging and analysis workflows, evaluate existing sensors, and develop new approaches when suitable tools are not available.</p>
                     <nav className={styles.home_actions} aria-label="Primary site actions">
                         <Link className={styles.home_action} to="/contact">Discuss a project</Link>
-                        <Link className={styles.home_action} to="/rates">Rates & Services</Link>
+                        <Link className={styles.home_action} to="/rates">Services & Rates</Link>
                         <Link className={styles.home_action} to="/collections">Biosensor Collection</Link>
                     </nav>
                 </div>
