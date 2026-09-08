@@ -47,6 +47,14 @@
     align-items: center;
 }
 
+.home_intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    padding: 2% 0 5% 0;
+}
+
 .mission_section {
     background-color: var(--navy-blue);
     color: white;
@@ -56,6 +64,24 @@
 .mission_section h2 {
     color: var(--light-blue);
     margin-bottom: 2%;
+}
+
+.mission_section p {
+    margin-bottom: 1em;
+}
+
+.mission_section a {
+    color: var(--light-blue);
+    text-decoration: underline;
+}
+
+.rate_description {
+    display: block;
+    margin-top: 0.45em;
+    font-size: 0.75em;
+    font-weight: normal;
+    white-space: normal;
+    line-height: 1.35;
 }
 
 .table {

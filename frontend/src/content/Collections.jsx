@@ -2,28 +2,10 @@ import content from "../styles/Content.module.css"
 
 function Collections() {
     return <>
-        <div className={content.content_header}>Biosensor Collection</div>
+        <div className={content.content_header}>Biosensor collection</div>
         <div className={content.content_main}>
             <div className={content.content_default}>
-                <h3>Collection & Catalog Under Construction</h3>
-                <p>We're building an extensive biosensor collection and catalog. Stay tuned for updates!</p>
-                <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    style={{
-                        maxWidth: '100%',
-                        height: 'auto',
-                        marginTop: '20px',
-                        borderRadius: '8px',
-                        boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
-                    }}
-                >
-                    <source src="/images/under_construction.mov" type="video/quicktime" />
-                    <source src="/images/under_construction.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <p>We maintain a growing collection of characterized biosensor constructs and associated experimental resources. A searchable public catalog is in development. In the meantime, <a className={content.content_link} href="/contact">contact the Biosensor Core</a> if you are looking for a sensor for a particular measurement or application.</p>
             </div>
         </div>
     </>;

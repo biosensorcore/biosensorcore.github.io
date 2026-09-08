@@ -26,6 +26,10 @@
     margin: 1% 0%;
 }
 
+.content_default p {
+    margin-bottom: 1em;
+}
+
 .content_default:first-of-type {
     padding-top: 0.5%;
 }

@@ -22,6 +22,15 @@
     align-items: center;
 }
 
+.infobar_link {
+    color: white;
+    text-decoration: underline;
+}
+
+.infobar_link:hover {
+    color: var(--navy-blue);
+}
+
 .footer_main_container {
     background-color: var(--navy-blue);
     padding: 2em 3em 5em 3em;

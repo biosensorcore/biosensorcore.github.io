@@ -21,8 +21,8 @@ function Rates() {
                     <tbody>
                         {RateJSON.rates.map((rate) => (
                             <tr key={rate.id} id={rate.id}>
-                                <td dangerouslySetInnerHTML={{__html: rate.type}}></td>
-                                <td dangerouslySetInnerHTML={{__html: rate.description}}></td>
+                                <td>{rate.type}</td>
+                                <td>{rate.description}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -34,42 +34,52 @@ function Rates() {
                 <table className={styles.table}>
                     <thead>
                         <tr>
-                            <th>Service Type</th>
-                            <th>UCSD Rate</th>
-                            <th>Non-UCSD Academic Rate</th>
-                            <th>Commercial Rate</th>
+                            <th>Category</th>
+                            <th>UC San Diego</th>
+                            <th>Non-UCSD Academic</th>
+                            <th>Commercial</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Consultation</td>
+                            <td>
+                                Consultation
+                                <span className={styles.rate_description}>Scientific planning and discussion related to biosensor selection, assay design, imaging strategy, experimental controls, troubleshooting, or interpretation.</span>
+                            </td>
                             <td>$100/hr</td>
                             <td>$145/hr</td>
                             <td>$250/hr</td>
                         </tr>
                         <tr>
-                            <td>Sensor Design & Data Analysis</td>
+                            <td>
+                                Sensor Design & Data Analysis
+                                <span className={styles.rate_description}>Biosensor and construct design, sequence and architecture analysis, quantitative data analysis, development or adaptation of analysis workflows, and interpretation of biosensor measurements.</span>
+                            </td>
                             <td>$100/hr</td>
                             <td>$145/hr</td>
                             <td>$250/hr</td>
                         </tr>
                         <tr>
-                            <td>Wet Lab Work</td>
+                            <td>
+                                Wet Lab Work
+                                <span className={styles.rate_description}>Hands-on experimental work performed by Core staff, including molecular biology, cloning, cell culture, protein expression or purification, assay execution, sample preparation, and routine characterization as appropriate to the project. Supplies and external pass-through costs are billed separately unless explicitly included in an estimate.</span>
+                            </td>
                             <td>$100/hr</td>
                             <td>$145/hr</td>
                             <td>$250/hr</td>
                         </tr>
                         <tr>
-                            <td>Live-Cell Imaging (full-service)</td>
+                            <td>
+                                Live-Cell Imaging (full-service)
+                                <span className={styles.rate_description}>Core staff time for live-cell imaging experiments, including acquisition setup, experimental monitoring, image acquisition, and routine handling of the resulting data. Instrument charges from other imaging facilities and project-specific supplies may be billed separately where applicable.</span>
+                            </td>
                             <td>$150/hr</td>
                             <td>$218/hr</td>
                             <td>$375/hr</td>
                         </tr>
                         <tr>
                             <td>Imaging (Nikon Imaging Center)</td>
-                            <td></td>
-                            <td><a href="https://nic.ucsd.edu/rates/index.html" target="_blank" rel="noopener noreferrer">https://nic.ucsd.edu/rates/index.html</a></td>
-                            <td></td>
+                            <td colSpan="3"><a href="https://nic.ucsd.edu/rates/index.html" target="_blank" rel="noopener noreferrer">https://nic.ucsd.edu/rates/index.html</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -78,53 +88,71 @@ function Rates() {
             </div>
             
             <div className={content.content_default}>
-                <h3>Project Cost Estimates</h3>
-                <p><em>Note: Total cost range estimates below include hourly charges only. Additional supply costs may apply (see Supply Costs table).</em></p>
+                <h3>Typical Project Planning Ranges</h3>
+                <p>The ranges below are intended for project planning and are not fixed-price quotes. Actual cost depends on experimental readiness, construct and assay complexity, the number of variants, conditions, and controls, the amount of troubleshooting required, and whether new methods or sensor engineering are needed. Established workflows can usually be estimated relatively closely, whereas novel biosensor development and optimization are inherently less predictable. We will discuss substantial changes in scope or expected cost before proceeding.</p>
                 <table className={styles.table}>
                     <thead>
                         <tr>
-                            <th>Project Type</th>
-                            <th>UCSD Rate</th>
-                            <th>Non-UCSD Academic Rate</th>
-                            <th>Commercial Rate</th>
+                            <th>Project</th>
+                            <th>UC San Diego</th>
+                            <th>Non-UCSD Academic</th>
+                            <th>Commercial</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="consultation">
-                            <td>Consultation</td>
-                            <td>$100 - $400</td>
-                            <td>$145 - $580</td>
-                            <td>$250 - $1,000</td>
+                        <tr id="est-consultation">
+                            <td>
+                                Consultation
+                                <span className={styles.rate_description}>Focused planning, sensor selection, troubleshooting, or analysis consultation. Straightforward questions may require only a short consultation, whereas development of a new experimental approach can require several sessions.</span>
+                            </td>
+                            <td>$100–$800</td>
+                            <td>$145–$1,160</td>
+                            <td>$250–$2,000</td>
                         </tr>
-                        <tr id="prototype_design">
-                            <td>Prototype Biosensor Design (one target)</td>
-                            <td>$200 - $500</td>
-                            <td>$290 - $725</td>
-                            <td>$500 - $1,250</td>
+                        <tr id="est-prototype-design">
+                            <td>
+                                Prototype Biosensor Design
+                                <span className={styles.rate_description}>Design of one or more biosensor architectures or constructs for a defined biological measurement. Scope depends on the amount of literature and sequence analysis required, construct complexity, and the number of alternative designs considered.</span>
+                            </td>
+                            <td>$300–$1,500</td>
+                            <td>$435–$2,175</td>
+                            <td>$750–$3,750</td>
                         </tr>
-                        <tr id="prototype_construction">
-                            <td>Prototype Biosensor Construction (one plasmid)</td>
-                            <td>$400 - $800</td>
-                            <td>$580 - $1,160</td>
-                            <td>$1,000 - $2,000</td>
+                        <tr id="est-prototype-construction">
+                            <td>
+                                Prototype Biosensor Construction
+                                <span className={styles.rate_description}>Construction of prototype plasmids using standard molecular biology approaches. More complex assemblies, multiple constructs, iterative troubleshooting, or outsourced synthesis can increase total cost.</span>
+                            </td>
+                            <td>$500–$2,500</td>
+                            <td>$725–$3,625</td>
+                            <td>$1,250–$6,250</td>
                         </tr>
-                        <tr id="vitro">
-                            <td>Biosensor Characterization (<i>in vitro</i>)</td>
-                            <td>$1,200 - $2,600</td>
-                            <td>$1,740 - $3,770</td>
-                            <td>$3,000 - $6,500</td>
+                        <tr id="est-vitro">
+                            <td>
+                                Biosensor Characterization (<i>in vitro</i>)
+                                <span className={styles.rate_description}>Biochemical characterization of an existing or prototype biosensor or variant set. Scope depends on protein production, assay development, controls, experimental conditions, and the number of variants examined.</span>
+                            </td>
+                            <td>$1,500–$6,000</td>
+                            <td>$2,175–$8,700</td>
+                            <td>$3,750–$15,000</td>
                         </tr>
-                        <tr id="cellulo">
-                            <td>Biosensor Characterization (<i>in cellulo</i>)</td>
-                            <td>$1,800 - $4,900</td>
-                            <td>$2,610 - $7,105</td>
-                            <td>$4,500 - $12,250</td>
+                        <tr id="est-cellulo">
+                            <td>
+                                Biosensor Characterization (<i>in cellulo</i>)
+                                <span className={styles.rate_description}>Cell-based characterization of an existing or prototype biosensor or variant set. Scope depends on the cell model, assay maturity, number of constructs and conditions, required controls, imaging burden, troubleshooting, and quantitative analysis.</span>
+                            </td>
+                            <td>$2,000–$10,000</td>
+                            <td>$2,900–$14,500</td>
+                            <td>$5,000–$25,000</td>
                         </tr>
-                        <tr id="optimization">
-                            <td>Full-Scale Biosensor Optimization (one scaffold)</td>
-                            <td>$3,000 - $9,000</td>
-                            <td>$4,350 - $13,050</td>
-                            <td>$7,500 - $22,500</td>
+                        <tr id="est-optimization">
+                            <td>
+                                Full-Scale Biosensor Optimization
+                                <span className={styles.rate_description}>Iterative biosensor engineering that may include library design, screening, directed evolution, repeated characterization, and assay development. These projects are inherently less predictable than established assays and may extend beyond the planning range shown above after discussion with the investigator.</span>
+                            </td>
+                            <td>$5,000–$30,000</td>
+                            <td>$7,250–$43,500</td>
+                            <td>$12,500–$75,000</td>
                         </tr>
                     </tbody>
                 </table>
@@ -137,7 +165,7 @@ function Rates() {
                     <thead>
                         <tr>
                             <th>Supply Category</th>
-                            <th><p>UCSD</p> Unit Cost</th>
+                            <th><p>UC San Diego</p> Unit Cost</th>
                             <th><p>Non-UCSD Academic</p> Unit Cost</th>
                             <th>Description</th>
                         </tr>
@@ -163,9 +191,15 @@ function Rates() {
                         </tr>
                         <tr>
                             <td><p>Gene synthesis</p> (per base)</td>
-                            <td>$0.07</td>
-                            <td>$0.10</td>
-                            <td>Cost per-base for synthesizing genes for plasmid construction (using Gibson and in-hand vector)</td>
+                            <td>$0.09/base</td>
+                            <td>$0.09/base</td>
+                            <td>Pass-through cost for gene synthesis based on current vendor pricing. The current planning rate is $0.09 per base. Vendor pricing may change, and the final synthesis cost may therefore vary.</td>
+                        </tr>
+                        <tr>
+                            <td><p>Plasmid cloning and sequencing</p> (per plasmid)</td>
+                            <td>$25/plasmid</td>
+                            <td>$25/plasmid</td>
+                            <td>Charge for cloning the synthesized gene into the requested plasmid and sequence verification.</td>
                         </tr>
                         <tr>
                             <td><p>Whole-plasmid synthesis</p> (1 plasmid)</td>
@@ -176,6 +210,7 @@ function Rates() {
                     </tbody>
                 </table>
                 <p className={styles.table_footnote}>* Supply costs for commercial users will be included in contract negotiations.</p>
+                <p className={styles.table_footnote}>** Additional charges may apply for large-scale plasmid preparation, purification, unusually complex constructs, or other requested preparation.</p>
             </div>
         </div>
     </>;

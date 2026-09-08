@@ -7,7 +7,7 @@ function Header() {
             <a href="/"><h1>BIOSENSOR CORE</h1></a>
         </div>
         <div className={styles.logo_container}>
-            <a href="https://ucsd.edu"><img className={styles.header_logo_image} src="images/ucsd-logo-long.png" alt="UCSD Logo"/></a>
+            <a href="https://ucsd.edu"><img className={styles.header_logo_image} src="images/ucsd-logo-long.png" alt="UC San Diego Logo"/></a>
         </div>
     </div>);
 }

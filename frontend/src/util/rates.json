@@ -1,57 +1,34 @@
 {
-    "rates": [{
-            "type": "Consultation",
-            "description": "We are available for formal consultations to provide advice and guidance on all biosensor-related topics, including choosing and implementing existing biosensors for imaging or microplate-based assays, best practices for data collection and analysis for quantitative studies, choice of imaging modality, and approaches to novel biosensor design and engineering.",
-            "personnel_consultation": "1-2",
-            "personnel_design": "0-2",
-            "wet_lab": "",
-            "imaging": "",
-            "id": "consultation"
+    "rates": [
+        {
+            "type": "Consultation and Experimental Planning",
+            "description": "Biosensor selection, assay design, imaging strategy, quantitative analysis planning, and troubleshooting.",
+            "id": "svc-consultation"
         },
         {
-            "type": "Prototype Biosensor Design",
-            "description": "If a biosensor doesn't yet exist for the biological activity you need to observe, we can generate one or more prototype sequences for you based on our consultation with you and the information you provide. Prototypes will be provided as codon-optimized nucleotide sequences ready for you to construct or have synthesized commercially.",
-            "personnel_consultation": "2-3",
-            "personnel_design": "0-2",
-            "wet_lab": "",
-            "imaging": "",
-            "id": "prototype_design"
+            "type": "Biosensor Characterization and Benchmarking",
+            "description": "Quantitative evaluation of existing or prototype sensors in vitro or in cells. Measurements are selected according to the sensor and intended application and may include response magnitude, kinetics, apparent affinity or specificity, brightness, photostability, pH dependence, expression, or subcellular localization.",
+            "id": "svc-characterization"
         },
         {
-            "type": "Prototype Biosensor Construction",
-            "description": "We can do the remaining molecular biology work for you once a prototype design is generated, providing you with purified, sequence-verified plasmid ready for transfection in your target assay.",
-            "personnel_consultation": "2-3",
-            "personnel_design": "2-5",
-            "wet_lab": "",
-            "imaging": "",
-            "id": "prototype_construction"
+            "type": "Imaging and Quantitative Analysis",
+            "description": "Experimental imaging, development of appropriate acquisition workflows, and quantitative analysis of biosensor data, including custom analysis when needed.",
+            "id": "svc-imaging"
         },
         {
-            "type": "Biosensor Characterization (<i>in vitro</i>)",
-            "description": "We can perform <i>in vitro</i> characterization of existing or new (e.g., prototype) biosensor performance, quantitatively measuring properties such as apparent ligand affinity and specificity, brightness, photostability, pH dependence, and subcellular localization.",
-            "personnel_consultation": "2-3",
-            "personnel_design": "4-8",
-            "wet_lab": "6-15",
-            "imaging": "",
-            "id": "vitro"
+            "type": "Training",
+            "description": "Practical guidance in biosensor implementation, imaging, experimental controls, and quantitative analysis.",
+            "id": "svc-training"
         },
         {
-            "type": "Biosensor Characterization (<i>in cellulo</i>)",
-            "description": "We can perform <i>in cellulo</i> characterization of existing or new (e.g., prototype) biosensor performance, quantitatively measuring properties such as apparent ligand affinity and specificity, brightness, photostability, pH dependence, and subcellular localization.",
-            "personnel_consultation": "2-3",
-            "personnel_design": "2-4",
-            "wet_lab": "12-24",
-            "imaging": "",
-            "id": "cellulo"
+            "type": "Prototype Biosensor Development",
+            "description": "Design, construction, and initial evaluation of new biosensor concepts when suitable existing tools are unavailable.",
+            "id": "svc-prototype"
         },
         {
-            "type": "Full-Scale Biosensor Optimization",
-            "description": "Custom projects of any scale are possible, ranging from re-optimization of existing biosensors to directed evolution of new biosensors",
-            "personnel_consultation": "2-3",
-            "personnel_design": "3-6",
-            "wet_lab": "12-24",
-            "imaging": "8-16",
-            "id": "optimization"
+            "type": "Custom Biosensor Engineering",
+            "description": "Larger collaborative projects involving sensor optimization, directed evolution, assay development, or other substantial biosensor-engineering work. Scope and cost are established individually.",
+            "id": "svc-custom"
         }
     ]
 }

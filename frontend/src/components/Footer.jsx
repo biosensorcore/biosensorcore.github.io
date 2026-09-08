@@ -6,11 +6,16 @@ function Footer() {
             <div className={styles.footer_infobar}>
                 <div className={styles.infobar_logo_container}>
                 <a href="https://ucsd.edu">
-                    <img className={styles.infobar_logo} src="images/ucsd-logo-white.png" alt="UCSD Logo"/>
+                    <img className={styles.infobar_logo} src="images/ucsd-logo-white.png" alt="UC San Diego Logo"/>
                 </a>
                 </div>
-                <div className={styles.infobar_text}>9515 Gilman Drive, La Jolla, CA 92093</div>
-                <div className={styles.infobar_text}>(858) 822-4007</div>
+                <div className={styles.infobar_text}>
+                    Medical Teaching Facility, Room 421<br />
+                    9515 Gilman Drive, La Jolla, CA 92093
+                </div>
+                <div className={styles.infobar_text}>
+                    <a className={styles.infobar_link} href="mailto:biosensors@health.ucsd.edu">biosensors@health.ucsd.edu</a>
+                </div>
             </div>
 
             <div className={styles.footer_main_container}>
