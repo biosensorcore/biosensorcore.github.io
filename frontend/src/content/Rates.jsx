@@ -175,7 +175,7 @@ function Rates() {
                             <td><p>PCR/Gibson Supplies</p> (1 construct)</td>
                             <td>$400</td>
                             <td>$580</td>
-                            <td>Lab supplies + sequencing costs for constructing 1 simple plasmid (1 insert)</td>
+                            <td>Supplies and sequencing for construction of one simple plasmid from existing DNA templates using PCR/Gibson or comparable in-house molecular biology methods. Synthetic gene costs, when applicable, are billed separately.</td>
                         </tr>
                         <tr>
                             <td><p><i>in vitro</i> Characterization Supplies</p> (1 biosensor)</td>
@@ -187,25 +187,19 @@ function Rates() {
                             <td><p>Imaging Supplies</p> (1 construct)</td>
                             <td>$600</td>
                             <td>$870</td>
-                            <td>Lab supplies for maintaining 1 standard mammalian cell line for 1 week and performing 4 imaging experiments (~3h per experiment session)</td>
+                            <td>Project-specific cell culture, transfection and other reagents, and routine microscopy consumables for maintaining and imaging cells over approximately one week.</td>
                         </tr>
                         <tr>
                             <td><p>Gene synthesis</p> (per base)</td>
                             <td>$0.09/base</td>
-                            <td>$0.09/base</td>
-                            <td>Pass-through cost for gene synthesis based on current vendor pricing. The current planning rate is $0.09 per base. Vendor pricing may change, and the final synthesis cost may therefore vary.</td>
+                            <td>$0.13/base</td>
+                            <td>Vendor pass-through cost for gene synthesis based on current vendor pricing. The current UC San Diego planning rate is $0.09 per base and may change if vendor pricing changes. The Non-UCSD Academic rate includes the applicable 45% overhead.</td>
                         </tr>
                         <tr>
-                            <td><p>Plasmid cloning and sequencing</p> (per plasmid)</td>
+                            <td><p>Standard-vector cloning and sequence verification</p> (per plasmid)</td>
                             <td>$25/plasmid</td>
-                            <td>$25/plasmid</td>
-                            <td>Charge for cloning the synthesized gene into the requested plasmid and sequence verification.</td>
-                        </tr>
-                        <tr>
-                            <td><p>Whole-plasmid synthesis</p> (1 plasmid)</td>
-                            <td>$100</td>
-                            <td>$145</td>
-                            <td>Additional cost for full synthesis whole plasmids (for complex constructs and/or custom vectors)</td>
+                            <td>$36.25/plasmid</td>
+                            <td>Vendor pass-through charge for cloning a synthesized gene into a standard vector and sequence verification. The current planning rate may change if vendor pricing changes. The Non-UCSD Academic rate includes the applicable 45% overhead.</td>
                         </tr>
                     </tbody>
                 </table>
